@@ -49,6 +49,20 @@ The purpose of PM1 is to use John The Ripper (JTR) in a Windows environment for 
 
 The password-cracking activities presented in this project should only target authorized files and devices or those you own for security testing.
 
+##  Introduction
+
+This report covers footprinting the networkwalks.com domain using multiple Kali Linux tools (W2-PM1) and scanning my own local network with Zenmap (W2-PM5). One module covers the footprinting phase and the other covers the scanning phase, so together they show how an attacker moves from gathering public information to mapping live hosts on a network. These activities are part of the Week 2 of my internship program at Networkwalks.
+
+All commands were run in Kali Linux (footprinting and scanning). Every step below includes the exact command used, the result I observed, a screenshot as evidence, and a short note on why the finding matters from an attacker's point of view. The commands outputs are also saved in text files that are available in "/outputs_files" as well as the zenmap topology pdf file.
+
+---
+
+##  Liability Disclaimer
+
+I have performed these activities only on the systems & devices where I had secured written permission or the devices/systems that I own myself. All these materials are for education and research purpose only. 
+
+Do not use anything from here to break the law. The instructor, the authors and Networkwalks are not responsible for what you do with this knowledge. Every action you take is your own responsibility. Misuse can lead to criminal charges, heavy fines, loss of your job and a permanent record. In most countries unauthorised access is a crime even when nothing is damaged.
+
 ---
 
 # 📘Penetration Testing Report
@@ -73,43 +87,9 @@ hghh
 | **Permission secured from client?** | Yes |
 | **Phases covered** | **Phase 1:** Reconnaissance & Footprinting<br>**Phase 2:** Scanning & Network Discovery<br>**Phase 3-5:** In Progress |
 
----
 
-# 3.  💎 Findings and Proof of Exploitation
 
-## 🫆👣Footprinting & 🔍Network Scanning Phases
-
----
-
-# 4. 💎 Risk Rating
-
-fg
-
----
-
-# 5. 💎 Recommendations and Remediation
-
-dfdf
-
----
-
-# 1. Liability Disclaimer
-
-I have performed these activities only on the systems & devices where I had secured written permission or the devices/systems that I own myself. All these materials are for education and research purpose only. 
-
-Do not use anything from here to break the law. The instructor, the authors and Networkwalks are not responsible for what you do with this knowledge. Every action you take is your own responsibility. Misuse can lead to criminal charges, heavy fines, loss of your job and a permanent record. In most countries unauthorised access is a crime even when nothing is damaged.
-
----
-
-# 2. Introduction
-
-This report covers footprinting the networkwalks.com domain using multiple Kali Linux tools (W2-PM1) and scanning my own local network with Zenmap (W2-PM5). One module covers the footprinting phase and the other covers the scanning phase, so together they show how an attacker moves from gathering public information to mapping live hosts on a network. These activities are part of the Week 2 of my internship program at Networkwalks.
-
-All commands were run in Kali Linux (footprinting and scanning). Every step below includes the exact command used, the result I observed, a screenshot as evidence, and a short note on why the finding matters from an attacker's point of view. The commands outputs are also saved in text files that are available in "/outputs_files" as well as the zenmap topology pdf file.
-
----
-
-# 3. Tools Used
+## Tools Used
 
 The table below lists each tool used in this report and its purpose.
 
@@ -125,13 +105,18 @@ The table below lists each tool used in this report and its purpose.
 | Zenmap (Nmap GUI)    | Scan the local subnet to find live hosts, IPs and MAC addresses. |
 | Linux & Windows CMD | Local IP and MAC address identification / confirmation            |
 
+
+
+
+This report covers footprinting the networkwalks.com domain using multiple Kali Linux tools (W2-PM1) and scanning my own local network with Zenmap (W2-PM5). One module covers the footprinting phase and the other covers the scanning phase, so together they show how an attacker moves from gathering public information to mapping live hosts on a network. These activities are part of the Week 2 of my internship program at Networkwalks.
+
+All commands were run in Kali Linux (footprinting and scanning). Every step below includes the exact command used, the result I observed, a screenshot as evidence, and a short note on why the finding matters from an attacker's point of view. The commands outputs are also saved in text files that are available in "/outputs_files" as well as the zenmap topology pdf file.
+
 ---
 
-# 4. Activities Performed
+# 3.  💎 Findings and Proof of Exploitation
 
----
-
-## 4.1 Footprinting & Reconnaissance
+## 3.1 🫆 Footprinting & 🔍 Reconnaissance
 
 I performed reconnaissance against the `networkwalks.com` domain using six Kali Linux tools: **WHOIS, WhatWeb, Nslookup, Curl, Wafw00f and DNSRecon**. Each tool was used to collect a different type of information about the target.
 
@@ -149,7 +134,7 @@ Finally, I used **DNSRecon** to enumerate DNS records. The results provided info
 
 ---
 
-## 4.2 Network Scanning with Zenmap
+## 3.2 Network Scanning with Zenmap
 
 For the second activity, I launched the GUI of **Zenmap** from my Kali Linux. I used Zenmap to perform network discovery on my local network. The practical required me to identify my local IP address and subnet, discover live hosts, identify their IP and MAC addresses, and generate a network topology.
 
@@ -177,9 +162,10 @@ The results also included two MAC addresses.
 
 After completing the scan, I opened the **Topology** section in Zenmap, enabled the legend and saved the network topology in PDF format. The topology pdf file is available at /outputs_files/9_topology.pdf
 
+
 ---
 
-# 5. Risk Analysis / Impact
+# 4. 💎 Risk Rating
 
 Based on the information collected during the footprinting and network scanning activities, I identified the following potential risks.
 
@@ -202,7 +188,7 @@ Therefore, the presence of information such as a software version, IP address or
 
 ---
 
-# 6. Recommendations
+# 5. 💎 Recommendations and Remediation
 
 Based on the observations from these activities, I recommend the following security improvements:
 
@@ -235,7 +221,7 @@ Based on the observations from these activities, I recommend the following secur
 
 ---
 
-# 7. Conclusion
+# 6. Conclusion
 
 During Week 2 of my Cybersecurity & Ethical Hacking internship, I completed practical activities covering footprinting, reconnaissance and network scanning.
 
@@ -251,7 +237,7 @@ Finally, I demonstrated that reconnaissance and scanning must always be performe
 
 ---
 
-# 8. Evidences Collected
+# 7. Evidences Collected
 
 ---
 
