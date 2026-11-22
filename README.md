@@ -55,13 +55,13 @@ The password-cracking activities presented in this project should only target au
 
 ---
 
-## 1. 🎯 Executive Summary
+# 1. 🎯 Executive Summary
 
 hghh
 
 ---
 
-## 2. 💎 Scope and Methodology
+# 2. 💎 Scope and Methodology
 
 | Field | Detail |
 |---|---|
@@ -75,19 +75,19 @@ hghh
 
 ---
 
-## 3.  💎 Findings and Proof of Exploitation
+# 3.  💎 Findings and Proof of Exploitation
 
-### 🫆👣Footprinting & 🔍Network Scanning Phases
+## 🫆👣Footprinting & 🔍Network Scanning Phases
 
 ---
 
-## 4. 💎 Risk Rating
+# 4. 💎 Risk Rating
 
 fg
 
 ---
 
-## 5. 💎 Recommendations and Remediation
+# 5. 💎 Recommendations and Remediation
 
 dfdf
 
