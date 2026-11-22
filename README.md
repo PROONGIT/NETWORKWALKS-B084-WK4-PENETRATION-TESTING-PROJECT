@@ -41,10 +41,27 @@
 
 ---
 
-# 📘Penetration Testing Report
-### 🫆👣Footprinting & 🔍Network Scanning Phases
+## 📌 Project Overview
 
-**W2-PM-FINAL  |  CYBERSECURITY  |  NETWORKWALKS**
+This project focuses on password cracking and helps develop Cybersecurity skills such as Ethical Hacking, Penetration Testing. It is made of two modules : Project Module 1 (PM1) and Project Module 2 (PM2). 
+
+The purpose of PM1 is to use John The Ripper (JTR) in a Windows environment for password cracking. The PM2 aims to use two Networkwalks tools for password cracking.
+
+The password-cracking activities presented in this project should only target authorized files and devices or those you own for security testing.
+
+---
+
+# 📘Penetration Testing Report
+
+---
+
+## 1. 🎯 Executive Summary
+
+hghh
+
+---
+
+## 2. 💎 Scope and Methodology
 
 | Field | Detail |
 |---|---|
@@ -55,6 +72,24 @@
 | **Scope [Client/Target]** | 1. Networkwalks (secured written permission already)<br>2. My own local LAN Network |
 | **Permission secured from client?** | Yes |
 | **Phases covered** | **Phase 1:** Reconnaissance & Footprinting<br>**Phase 2:** Scanning & Network Discovery<br>**Phase 3-5:** In Progress |
+
+---
+
+## 3.  💎 Findings and Proof of Exploitation
+
+### 🫆👣Footprinting & 🔍Network Scanning Phases
+
+---
+
+## 4. 💎 Risk Rating
+
+fg
+
+---
+
+## 5. 💎 Recommendations and Remediation
+
+dfdf
 
 ---
 
