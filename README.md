@@ -99,7 +99,7 @@ Ultimately, the current website security does not meet the standards expected wi
 |---|---|
 |**Project Type** | Penetration Testing & Vulnerability Assessment|
 |**Client Name**| Mediroza General Hospital|
-|**Target**| https://medirozahospital.com|
+|**Target**| `https://medirozahospital.com`|
 |**Scope** |Full black-box penetration test. Identify vulnerabilities, exploit them to demonstrate real impact, and document all findings in a professional report.|
 |**Rules**| Testing limited to the target domain only. No social engineering. No denial of service. No testing outside agreed scope.|
 |**Authorization**| The client has provided written authorisation to conduct security testing on their web infrastructure.|
@@ -111,6 +111,8 @@ Ultimately, the current website security does not meet the standards expected wi
 ---
 
 ## Methodology
+
+We demonstrated the impact of vulnerabilities in a concrete way, using a structured penetration testing methodology (PTES – Penetration Testing Execution Standard).
 
 ````text
 Reconnaissance
