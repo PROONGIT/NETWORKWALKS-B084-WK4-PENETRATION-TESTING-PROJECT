@@ -187,25 +187,13 @@ First, I used **WHOIS** to obtain publicly available registration information. T
 
 I then used **WhatWeb** to identify technologies used by the website. The results identified **HTML5**, **LiteSpeed** and the IP address **199.188.201.16**. No versions of software exposed here.
 
----
-
-![WhatWeb.png](/screenshots/WhatWeb.png)
-
----
-
 Using **Nslookup**, I resolved the website name to its IP address. The provided result identified **199.188.201.16**.
-
----
-
-![nslookup.png](/screenshots/nslookup.png)
-
----
 
 I used **Curl** with the `-I` option to inspect the HTTP response headers. This provided **LiteSpeed** as server. No REST API endpoint exposed.
 
 ---
 
-![curl.png](/screenshots/curl.png)
+![whatweb.png](/screenshots/whatweb.png)
 
 ---
 
@@ -243,6 +231,18 @@ The results identified twelve active ports.
 
 ---
 
+![scan_short_2.png](/screenshots/scan_short_2.png)
+
+---
+
+![scan_short_3.png](/screenshots/scan_short_3.png)
+
+---
+
+![scan_short_4.png](/screenshots/scan_short_4.png)
+
+---
+
 I also full scanned with the command : 
 
 ````bash
@@ -254,6 +254,10 @@ The results identified twelve active ports.
 ---
 
 ![scan_full_1.png](/screenshots/scan_full_1.png)
+
+---
+
+![scan_full_2.png](/screenshots/scan_full_2.png)
 
 ---
 
