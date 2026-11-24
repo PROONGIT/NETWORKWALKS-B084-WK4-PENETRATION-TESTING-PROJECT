@@ -205,7 +205,7 @@ After completing the scan, I opened the **Topology** section in Zenmap, enabled 
 
 ## Shareholders
 
-|`id`|`shareholder_name`|`share_percent`|`shares_held`|`share_class`|
+|ID (`id`)|Shareholder Name (`shareholder_name`)|Share Percent (`share_percent`)|Shares Held (`shares_held`)|Share Class (`share_class`)|
 -----|-------------------|------------------|---------|---------|
 1|Dr. Rajesh Naidoo|18.0|180000|Ordinary|
 2|Cedar Health Holdings (Pty) Ltd|15.0|150000|Ordinary|
