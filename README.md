@@ -1,3 +1,5 @@
+<div align="center">
+
 # 🔐 Cybersecurity Lab - PENETRATION TESTING REPORT
 
 **Real-world Penetration Testing Project**
