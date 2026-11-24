@@ -93,17 +93,46 @@ Ultimately, the current website security does not meet the standards expected wi
 
 # 2. 💎 Scope and Methodology
 
+## Project details
+
 | Field | Detail |
 |---|---|
+|**Project Type** | Penetration Testing & Vulnerability Assessment|
+|**Client Name**| Mediroza General Hospital|
+|**Target**| https://medirozahospital.com|
+|**Scope** |Full black-box penetration test. Identify vulnerabilities, exploit them to demonstrate real impact, and document all findings in a professional report.|
+|**Rules**| Testing limited to the target domain only. No social engineering. No denial of service. No testing outside agreed scope.|
+|**Authorization**| The client has provided written authorisation to conduct security testing on their web infrastructure.|
+|**Timeline**| 5 days. Work independently. Do not discuss findings with other participants until the reveal session.|
 | **Pentester Name (Cybersecurity Professional)** | **AZIAGBEDO KOKOU SODJINE** |
 | **Program/Batch** | B084-Networkwalks |
 | **Date** | 23 November 2026 |
-| **Modules completed** | W2-PM1 (Multiple Kali Tools)<br>W2-PM5 (Zenmap Scanning) |
-| **Scope [Client/Target]** | 1. Networkwalks (secured written permission already)<br>2. My own local LAN Network |
-| **Permission secured from client?** | Yes |
-| **Phases covered** | **Phase 1:** Reconnaissance & Footprinting<br>**Phase 2:** Scanning & Network Discovery<br>**Phase 3-5:** In Progress |
 
+---
 
+## Methodology
+
+````text
+Reconnaissance
+      ↓
+Enumeration
+      ↓
+Vulnerability Identification
+      ↓
+Manual Validation
+      ↓
+Controlled Exploitation
+      ↓
+Impact Assessment
+      ↓
+Evidence Collection
+      ↓
+Risk Rating
+      ↓
+Remediation
+````
+
+---
 
 ## Tools Used
 
