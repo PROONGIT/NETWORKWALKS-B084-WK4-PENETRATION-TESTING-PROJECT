@@ -213,6 +213,10 @@ Finally, I used **DNSRecon** to enumerate DNS records. The results provided info
 
 ---
 
+The outputs of all the above commands were saved in a txt file available at **`/output_files/footprinting.txt`**.
+
+---
+
 ### Ports Scanning with Nmap
 
 I used **nmap** from my Kali Linux terminal to perform ports scanning on the target. The website's IP address is **`199.188.201.16`**). 
@@ -243,6 +247,10 @@ The results identified twelve active ports.
 
 ---
 
+The output of this first scan is saved in a txt file available at **`/output_files/scan_short.txt`**.
+
+---
+
 I also full scanned with the command : 
 
 ````bash
@@ -261,7 +269,7 @@ The results identified twelve active ports.
 
 ---
 
-The scans output files are available at `/outputs_files/scan_short.txt` and `/outputs_files/scan_full.txt`.
+The output of this second scan is saved in a txt file available at **`/outputs_files/scan_full.txt`**.
 
 ---
 
