@@ -43,23 +43,25 @@
 
 ## 📌 Project Overview
 
-This project focuses on password cracking and helps develop Cybersecurity skills such as Ethical Hacking, Penetration Testing. It is made of two modules : Project Module 1 (PM1) and Project Module 2 (PM2). 
+This project is a real-world Penetration Testing Project structured in four milestonese (M1, M2, M3 and M4).
 
-The purpose of PM1 is to use John The Ripper (JTR) in a Windows environment for password cracking. The PM2 aims to use two Networkwalks tools for password cracking.
+M1 - Initial Access : Attack of the website and retrieval of 3 confidential patient PDF lab reports.
 
-The password-cracking activities presented in this project should only target authorized files and devices or those you own for security testing.
+M2 - Data Extraction : Cracking the encryption on all 3 retrieved files.
 
-##  Introduction
+M3 - Attack (cracking) : Finding staff salaries and shareholder details of the hospital.
 
-This report covers footprinting the networkwalks.com domain using multiple Kali Linux tools (W2-PM1) and scanning my own local network with Zenmap (W2-PM5). One module covers the footprinting phase and the other covers the scanning phase, so together they show how an attacker moves from gathering public information to mapping live hosts on a network. These activities are part of the Week 2 of my internship program at Networkwalks.
+M4 - Pentest Report : Writing a professional penetration testing report for the client.
 
-All commands were run in Kali Linux (footprinting and scanning). Every step below includes the exact command used, the result I observed, a screenshot as evidence, and a short note on why the finding matters from an attacker's point of view. The commands outputs are also saved in text files that are available in "/outputs_files" as well as the zenmap topology pdf file.
+The project has a timeline of 5 days.
+
+The client has provided written authorisation to conduct security testing on their web infrastructure.
 
 ---
 
 ##  Liability Disclaimer
 
-I have performed these activities only on the systems & devices where I had secured written permission or the devices/systems that I own myself. All these materials are for education and research purpose only. 
+This project is conducted in a controlled environment for educational purposes only. The target has been authorised for security testing by Networkwalks. These techniques must never be applied to any system without explicit written permission from the owner.
 
 Do not use anything from here to break the law. The instructor, the authors and Networkwalks are not responsible for what you do with this knowledge. Every action you take is your own responsibility. Misuse can lead to criminal charges, heavy fines, loss of your job and a permanent record. In most countries unauthorised access is a crime even when nothing is damaged.
 
