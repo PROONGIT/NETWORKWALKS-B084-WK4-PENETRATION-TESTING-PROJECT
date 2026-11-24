@@ -103,10 +103,20 @@ Ultimately, the current website security does not meet the standards expected wi
 |**Scope** |Full black-box penetration test. Identify vulnerabilities, exploit them to demonstrate real impact, and document all findings in a professional report.|
 |**Rules**| Testing limited to the target domain only. No social engineering. No denial of service. No testing outside agreed scope.|
 |**Authorization**| The client has provided written authorisation to conduct security testing on their web infrastructure.|
-|**Timeline**| 5 days. Work independently. Do not discuss findings with other participants until the reveal session.|
-| **Pentester Name (Cybersecurity Professional)** | **AZIAGBEDO KOKOU SODJINE** |
-| **Program/Batch** | B084-Networkwalks |
+|**Timeline**| 5 days. Work independently.|
+
+---
+
+## Report details
+
+| Field | Detail |
+|---|---|
 | **Date** | 23 November 2026 |
+| **Version** | 1.0.0 |
+| **Author (Cybersecurity Professional)** | **AZIAGBEDO KOKOU SODJINE** |
+| **Classification** | CONFIDENTIAL|
+| **Reference standards** | Compliant with ISO 27001:2022 and PASSI reference standard (ANSSI)|
+| **Client company** |Mediroza General Hospital|
 
 ---
 
