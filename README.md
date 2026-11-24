@@ -167,51 +167,97 @@ The table below lists each tool used in this report and its purpose.
 
 # 3.  💎 Findings and Proof of Exploitation
 
-## 3.1 🫆 Footprinting & 🔍 Reconnaissance
+---
 
-We performed reconnaissance against the `https://medirozahospital.com` website using Kali Linux tools: **Whois, WhatWeb, Nslookup, Curl, Wafw00f and DNSRecon**. Each tool was used to collect a different type of information about the target.
+## 3.1 Milestone 1 - Attack and patients reports getting
 
-First, we used **WHOIS** to obtain publicly available registration information. The results provided no valuable information. 
+---
+
+### 🫆 Footprinting & 🔍 Reconnaissance
+
+I performed reconnaissance against the `https://medirozahospital.com` website using Kali Linux tools: **Whois, WhatWeb, Nslookup, Curl, Wafw00f and DNSRecon**. Each tool was used to collect a different type of information about the target.
+
+First, I used **WHOIS** to obtain publicly available registration information. The results provided no valuable information. 
+
+---
+
+![whois.png](/screenshots/whois.png)
+
+---
 
 I then used **WhatWeb** to identify technologies used by the website. The results identified **HTML5**, **LiteSpeed** and the IP address **199.188.201.16**. No versions of software exposed here.
 
+---
+
+![WhatWeb.png](/screenshots/WhatWeb.png)
+
+---
+
 Using **Nslookup**, I resolved the website name to its IP address. The provided result identified **199.188.201.16**.
+
+---
+
+![nslookup.png](/screenshots/nslookup.png)
+
+---
 
 I used **Curl** with the `-I` option to inspect the HTTP response headers. This provided **LiteSpeed** as server. No REST API endpoint exposed.
 
+---
+
+![curl.png](/screenshots/curl.png)
+
+---
+
 Next, I used **Wafw00f** to determine whether a Web Application Firewall was protecting the website. The result identified **LiteSpeed (LiteSpeed Technologies)**.
+
+---
+
+![wafw00f.png](/screenshots/wafw00f.png)
+
+---
 
 Finally, I used **DNSRecon** to enumerate DNS records. The results provided information relating to name servers and TXT records.
 
 ---
 
-## 3.2 Network Scanning with Zenmap
+![dnsrecon.png](/screenshots/dnsrecon.png)
 
-For the second activity, I launched the GUI of **Zenmap** from my Kali Linux. I used Zenmap to perform network discovery on my local network. The practical required me to identify my local IP address and subnet, discover live hosts, identify their IP and MAC addresses, and generate a network topology.
+---
 
-I first used the `ifconfig -a` command on the Kali VM to identify my local IP address (**`10.0.0.2`**) and LAN subnet (**`10.0.0.0/24`**). I then entered the subnet into Zenmap and selected **`Ping Scan`** to identify active hosts. 
+### Ports Scanning with Nmap
 
-And I scanned with the command : 
+I used **nmap** from my Kali Linux terminal to perform ports scanning on the target. The website's IP address is **`199.188.201.16`**). 
+
+I scanned with the command : 
 
 ````bash
-nmap -sn 10.0.0.0/24
+nmap -sV -sC 199.188.201.16
 ````
 
-The results identified three live hosts:
+The results identified twelve active ports.
 
-- `10.0.0.1`
-- `10.0.0.7`
-- `10.0.0.2`
+---
 
-The results also included two MAC addresses.
+![scan_short_1.png](/screenshots/scan_short_1.png)
 
-|Live Hosts       | IP Address | MAC Address | Local VM Name |
-|-----------------|------------|-------------|---------------|
-|QEMU virtual NIC | 10.0.0.1 | 52:54:00:12:35:00 | Gateway |
-|Oracle VirtualBox virtual NIC | 10.0.0.7| 08:00:27:CE:C9:16 | Windows7 VM |
-|Zenmap Host  | 10.0.0.2 | 08:00:27:08:12:48| KALI_LINUX VM |
+---
 
-After completing the scan, I opened the **Topology** section in Zenmap, enabled the legend and saved the network topology in PDF format. The topology pdf file is available at /outputs_files/9_topology.pdf
+I also full scanned with the command : 
+
+````bash
+nmap -A -p- -T4 199.188.201.16 -oN scan_full.txt 
+````
+
+The results identified twelve active ports.
+
+---
+
+![scan_full_1.png](/screenshots/scan_full_1.png)
+
+---
+
+The scans output files are available at `/outputs_files/scan_short.txt` and `/outputs_files/scan_full.txt`.
 
 ---
 
