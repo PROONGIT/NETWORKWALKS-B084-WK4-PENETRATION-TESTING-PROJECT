@@ -45,13 +45,13 @@
 
 This project is a real-world Penetration Testing Project structured in four milestonese (M1, M2, M3 and M4).
 
-M1 - Initial Access : Attack of the website and retrieval of 3 confidential patient PDF lab reports.
+👉 M1 - Initial Access : Attack of the website and retrieval of 3 confidential patient PDF lab reports.
 
-M2 - Data Extraction : Cracking the encryption on all 3 retrieved files.
+👉 M2 - Data Extraction : Cracking the encryption on all 3 retrieved files.
 
-M3 - Attack (cracking) : Finding staff salaries and shareholder details of the hospital.
+👉 M3 - Attack (cracking) : Finding staff salaries and shareholder details of the hospital.
 
-M4 - Pentest Report : Writing a professional penetration testing report for the client.
+👉 M4 - Pentest Report : Writing a professional penetration testing report for the client.
 
 The project has a timeline of 5 days.
 
