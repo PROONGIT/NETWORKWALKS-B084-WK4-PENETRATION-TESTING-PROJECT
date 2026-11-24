@@ -93,7 +93,7 @@ Ultimately, the current website security does not meet the standards expected wi
 
 # 2. 💎 Scope and Methodology
 
-## Project details
+## 2.1 Project details
 
 | Field | Detail |
 |---|---|
@@ -107,7 +107,7 @@ Ultimately, the current website security does not meet the standards expected wi
 
 ---
 
-## Report details
+## 2.2 Report details
 
 | Field | Detail |
 |---|---|
@@ -120,7 +120,7 @@ Ultimately, the current website security does not meet the standards expected wi
 
 ---
 
-## Methodology
+## 2.3 Methodology
 
 We demonstrated the impact of vulnerabilities in a concrete way, using a structured penetration testing methodology (PTES – Penetration Testing Execution Standard).
 
@@ -146,7 +146,7 @@ Remediation
 
 ---
 
-## Tools Used
+## 2.4 Tools Used
 
 The table below lists each tool used in this report and its purpose.
 
@@ -169,19 +169,19 @@ The table below lists each tool used in this report and its purpose.
 
 ## 3.1 🫆 Footprinting & 🔍 Reconnaissance
 
-I performed reconnaissance against the `networkwalks.com` domain using six Kali Linux tools: **WHOIS, WhatWeb, Nslookup, Curl, Wafw00f and DNSRecon**. Each tool was used to collect a different type of information about the target.
+We performed reconnaissance against the `https://medirozahospital.com` website using Kali Linux tools: **Whois, WhatWeb, Nslookup, Curl, Wafw00f and DNSRecon**. Each tool was used to collect a different type of information about the target.
 
-First, I used **WHOIS** to obtain publicly available domain registration information and identify the domain’s name servers. The results provided information about the domain registration and hosting infrastructure.
+First, we used **WHOIS** to obtain publicly available registration information. The results provided no valuable information. 
 
-I then used **WhatWeb** to identify technologies used by the website. The results identified **WordPress 7.1.4**, **WordPress Download Manager 3.3.76**, **Bootstrap 7.1.4** and **JQuery 3.7.1**, along with other informations exposed by the website.
+I then used **WhatWeb** to identify technologies used by the website. The results identified **HTML5**, **LiteSpeed** and the IP address **199.188.201.16**. No versions of software exposed here.
 
-Using **Nslookup**, I resolved the domain name to its IP address. The provided result identified **192.232.216.135**.
+Using **Nslookup**, I resolved the website name to its IP address. The provided result identified **199.188.201.16**.
 
-I used **Curl** with the `-I` option to inspect the HTTP response headers. This provided additional information about the web application and exposed the WordPress REST API endpoint `/wp-json/`.
+I used **Curl** with the `-I` option to inspect the HTTP response headers. This provided **LiteSpeed** as server. No REST API endpoint exposed.
 
-Next, I used **Wafw00f** to determine whether a Web Application Firewall was protecting the website. The result identified **ModSecurity (SpiderLabs)**.
+Next, I used **Wafw00f** to determine whether a Web Application Firewall was protecting the website. The result identified **LiteSpeed (LiteSpeed Technologies)**.
 
-Finally, I used **DNSRecon** to enumerate DNS records. The results provided information relating to name servers, mail servers, SPF/TXT records, service records and DNS software information.
+Finally, I used **DNSRecon** to enumerate DNS records. The results provided information relating to name servers and TXT records.
 
 ---
 
