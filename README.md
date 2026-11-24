@@ -237,6 +237,23 @@ UNLOCK TABLES;
 (29,|'Peter van Wyk',|'Procurement Officer',|'Supply Chain','|,38000,|'2015-08-24'),|
 (30,|'Andile Mbeki'|,'Ward Clerk',|'Administration',|,21000,|'2019-11-05');|
 
+---
+
+## Shareholders
+
+|`id`|,`shareholder_name`|,`share_percent`|,`shares_held`|,`share_class`|
+-----|-------------------|------------------|---------|---------|
+(1|,'Dr. Rajesh Naidoo'|,18.0|,180000|,'Ordinary'),|
+(2,|'Cedar Health Holdings (Pty) Ltd'|,15.0,|150000,|'Ordinary'),|
+(3,|'Dr. Johan van der Merwe'|,12.0|,120000,|'Ordinary'),|
+(4,|'Reddy Family Trust',|11.0,|110000,|'Ordinary'),|
+(5,|'Thabo Molefe'|,10.0|,100000,|'Ordinary'),|
+(6,|'Sarah Botha',|9.0,|90000,|'Ordinary'),|
+(7,|'Dr. Ahmed Kara'|,8.0|,80000,|'Preferential'),|
+(8,|'Naledi Zulu'|,7.0,|70000,|'Ordinary'),|
+(9|,'Michael Roberts'|,6.0|,60000,|'Ordinary'),|
+(10,|'Dr. Vikram Chetty'|,4.0|,40000,|'Preferential');|
+
 
 ---
 
