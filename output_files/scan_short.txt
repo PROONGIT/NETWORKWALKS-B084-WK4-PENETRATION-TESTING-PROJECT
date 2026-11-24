@@ -1,0 +1,86 @@
+┌──(kali㉿kali)-[~]
+└─$ nmap -sV -sC 199.188.201.16
+Starting Nmap 7.99 ( https://nmap.org ) at 2026-11-22 15:54 +0000
+Nmap scan report for server274-1.web-hosting.com (199.188.201.16)
+Host is up (0.075s latency).
+Not shown: 988 filtered tcp ports (no-response)
+PORT    STATE SERVICE        VERSION
+21/tcp  open  ftp            Pure-FTPd
+| ssl-cert: Subject: commonName=*.web-hosting.com
+| Subject Alternative Name: DNS:*.web-hosting.com, DNS:web-hosting.com
+| Not valid before: 2026-11-03T15:55:12
+|_Not valid after:  2027-05-20T15:34:46
+|_ssl-date: TLS randomness does not represent time
+25/tcp  open  smtp?
+|_smtp-commands: Couldn't establish connection on port 25
+26/tcp  open  smtp           Exim smtpd 4.100.1
+| smtp-commands: server274.web-hosting.com Hello server274-1.web-hosting.com [102.64.163.73], SIZE 52428800, LIMITS MAILMAX=1000 RCPTMAX=100, 8BITMIME, PIPELINING, PIPECONNECT, STARTTLS, HELP
+|_ Commands supported: AUTH STARTTLS HELO EHLO MAIL RCPT DATA BDAT NOOP QUIT RSET HELP
+| ssl-cert: Subject: commonName=*.web-hosting.com
+| Subject Alternative Name: DNS:*.web-hosting.com, DNS:web-hosting.com
+| Not valid before: 2026-11-03T15:55:12
+|_Not valid after:  2027-05-20T15:34:46
+|_ssl-date: TLS randomness does not represent time
+53/tcp  open  domain         (unknown banner: BIND)
+| dns-nsid: 
+|_  bind.version: BIND
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP: 
+|     version
+|     bind
+|_    BIND
+80/tcp  open  http-proxy     HAProxy http proxy 2.0.0 or later
+|_http-server-header: LiteSpeed
+|_http-open-proxy: Proxy might be redirecting requests
+|_http-title: 403 Forbidden
+110/tcp open  pop3           Dovecot pop3d
+|_ssl-date: TLS randomness does not represent time
+| ssl-cert: Subject: commonName=*.web-hosting.com
+| Subject Alternative Name: DNS:*.web-hosting.com, DNS:web-hosting.com
+| Not valid before: 2026-11-03T15:55:12
+|_Not valid after:  2027-05-20T15:34:46
+|_pop3-capabilities: USER AUTH-RESP-CODE SASL(PLAIN LOGIN) STLS RESP-CODES TOP PIPELINING UIDL CAPA
+143/tcp open  imap           Dovecot imapd
+|_ssl-date: TLS randomness does not represent time
+|_imap-capabilities: AUTH=LOGINA0001 more IMAP4rev1 have capabilities ENABLE LOGIN-REFERRALS IDLE post-login OK ID STARTTLS LITERAL+ AUTH=PLAIN listed SASL-IR Pre-login
+| ssl-cert: Subject: commonName=*.web-hosting.com
+| Subject Alternative Name: DNS:*.web-hosting.com, DNS:web-hosting.com
+| Not valid before: 2026-11-03T15:55:12
+|_Not valid after:  2027-05-20T15:34:46
+443/tcp open  ssl/http-proxy HAProxy http proxy 2.0.0 or later
+|_ssl-date: TLS randomness does not represent time
+| tls-alpn: 
+|   h2
+|_  http/1.1
+| ssl-cert: Subject: commonName=*.web-hosting.com
+| Subject Alternative Name: DNS:*.web-hosting.com, DNS:web-hosting.com
+| Not valid before: 2026-11-03T15:55:12
+|_Not valid after:  2027-05-20T15:34:46
+465/tcp open  ssl/smtp       Exim smtpd 4.100.1
+| smtp-commands: server274.web-hosting.com Hello server274-1.web-hosting.com [102.64.163.73], SIZE 52428800, LIMITS MAILMAX=1000 RCPTMAX=100, 8BITMIME, PIPELINING, PIPECONNECT, AUTH PLAIN LOGIN, HELP
+|_ Commands supported: AUTH HELO EHLO MAIL RCPT DATA BDAT NOOP QUIT RSET HELP
+|_ssl-date: TLS randomness does not represent time
+587/tcp open  smtp           Exim smtpd 4.100.1
+| smtp-commands: server274.web-hosting.com Hello server274-1.web-hosting.com [102.64.163.73], SIZE 52428800, LIMITS MAILMAX=1000 RCPTMAX=100, 8BITMIME, PIPELINING, PIPECONNECT, STARTTLS, HELP
+|_ Commands supported: AUTH STARTTLS HELO EHLO MAIL RCPT DATA BDAT NOOP QUIT RSET HELP
+|_ssl-date: TLS randomness does not represent time
+| ssl-cert: Subject: commonName=*.web-hosting.com
+| Subject Alternative Name: DNS:*.web-hosting.com, DNS:web-hosting.com
+| Not valid before: 2026-11-03T15:55:12
+|_Not valid after:  2027-05-20T15:34:46
+993/tcp open  ssl/imap       Dovecot imapd
+|_ssl-date: TLS randomness does not represent time
+995/tcp open  ssl/pop3       Dovecot pop3d
+|_ssl-date: TLS randomness does not represent time
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port53-TCP:V=7.99%I=7%D=11/22%Time=6B031051%P=x86_64-pc-linux-gnu%r(DNS
+SF:VersionBindReqTCP,3F,"\0=\0\x06\x85\0\0\x01\0\x01\0\x01\0\0\x07version\
+SF:x04bind\0\0\x10\0\x03\xc0\x0c\0\x10\0\x03\0\0\0\0\0\x05\x04BIND\xc0\x0c
+SF:\0\x02\0\x03\0\0\0\0\0\x02\xc0\x0c");
+Service Info: Host: server274.web-hosting.com; Device: load balancer
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 310.23 seconds
+                                                                                                                                                                      
+┌──(kali㉿kali)-[~]
+└─$ 

@@ -1,0 +1,58 @@
+┌──(kali㉿kali)-[~]
+└─$ nmap -A -p- -T4 199.188.201.16 -oN scan_complet.txt 
+Starting Nmap 7.99 ( https://nmap.org ) at 2026-11-22 16:17 +0000
+Nmap scan report for server274-1.web-hosting.com (199.188.201.16)
+Host is up (0.0095s latency).
+Not shown: 65502 filtered tcp ports (no-response), 21 filtered tcp ports (net-unreach)
+PORT     STATE SERVICE    VERSION
+21/tcp   open  tcpwrapped
+| ssl-cert: Subject: commonName=*.web-hosting.com
+| Subject Alternative Name: DNS:*.web-hosting.com, DNS:web-hosting.com
+| Not valid before: 2026-11-03T15:55:12
+|_Not valid after:  2027-05-20T15:34:46
+25/tcp   open  tcpwrapped
+|_smtp-commands: Couldn't establish connection on port 25
+53/tcp   open  tcpwrapped
+80/tcp   open  tcpwrapped
+110/tcp  open  tcpwrapped
+| ssl-cert: Subject: commonName=*.web-hosting.com
+| Subject Alternative Name: DNS:*.web-hosting.com, DNS:web-hosting.com
+| Not valid before: 2026-11-03T15:55:12
+|_Not valid after:  2027-05-20T15:34:46
+143/tcp  open  imap       Dovecot imapd
+443/tcp  open  ssl/https?
+| ssl-cert: Subject: commonName=*.web-hosting.com
+| Subject Alternative Name: DNS:*.web-hosting.com, DNS:web-hosting.com
+| Not valid before: 2026-11-03T15:55:12
+|_Not valid after:  2027-05-20T15:34:46
+| tls-alpn: 
+|   h2
+|_  http/1.1
+587/tcp  open  smtp       Exim smtpd 4.100.1
+|_smtp-commands: Couldn't establish connection on port 587
+| ssl-cert: Subject: commonName=*.web-hosting.com
+| Subject Alternative Name: DNS:*.web-hosting.com, DNS:web-hosting.com
+| Not valid before: 2026-11-03T15:55:12
+|_Not valid after:  2027-05-20T15:34:46
+993/tcp  open  ssl/imaps?
+995/tcp  open  ssl/pop3s?
+2083/tcp open  radsec?
+2096/tcp open  nbx-dir?
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: switch|phone
+Running (JUST GUESSING): Cisco embedded (87%), Nokia Symbian OS (86%)
+OS CPE: cpe:/h:cisco:catalyst_1900 cpe:/o:nokia:symbian_os
+Aggressive OS guesses: Cisco Catalyst 1900 switch (87%), Nokia 3600i mobile phone (86%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 1 hop
+Service Info: Host: server274.web-hosting.com
+
+TRACEROUTE (using port 80/tcp)
+HOP RTT     ADDRESS
+1   0.48 ms server274-1.web-hosting.com (199.188.201.16)
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 668.51 seconds
+                                                                                                                                                                      
+┌──(kali㉿kali)-[~]
+└─$ 
