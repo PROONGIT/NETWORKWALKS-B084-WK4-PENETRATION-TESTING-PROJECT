@@ -643,6 +643,12 @@ OWASP Top 10 - 2025
 
 
 
+
+
+
+
+
+
 | **\#** | **Risk / Finding**                           | **Evidence / Observation**                                  | **Potential Impact**                                                                                            | **Risk Level** |
 |--------|----------------------------------------------|-------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|----------------|
 | 1      | Web technology information exposed           | WhatWeb identified WordPress and WP Download Manager        | Attackers may use exposed technology/version information to identify software requiring further security review | **🟠 Medium**   |
@@ -652,13 +658,16 @@ OWASP Top 10 - 2025
 | 5      | DNS infrastructure information exposed       | DNSRecon identified DNS, mail and service-related records   | DNS information can help build a broader infrastructure profile                                                 | **🟠 Medium**   |
 | 6      | Multiple live hosts visible on local network | Zenmap identified three live hosts in the example network    | Unknown or unauthorized devices may potentially be present on a network                                         | **🟠 Medium**   |
 
-**Risk level key:** 🔴 Critical 🟠 Medium 🟡 Low
+**Risk level key:** 🔴 Critical 🟠 High 🟡 Medium 🟢 Low
 
-The risks above are observations from the footprinting and scanning exercises, not confirmed vulnerabilities.
+## Risk Severity Classification
 
-The practical exercises primarily involved information gathering and host discovery. No exploitation or vulnerability validation was performed as part of these two modules.
-
-Therefore, the presence of information such as a software version, IP address or DNS record does not by itself mean that the system is vulnerable. Further authorized security testing would be required to confirm any actual vulnerability.
+|Rating|	Description|	Management Attention|
+|------------|----|-----|
+|🔴 Critical	|Immediate risk of unauthorized access, large-scale data exposure, or significant business impact.	|Immediate remediation required
+|🟠 High	|Serious weakness that could lead to compromise of sensitive assets.	|Remediate as a priority
+|🟡 Medium	|Exploitable weakness with limited scope or requiring additional conditions.	|Planned remediation
+|🟢 Low	|Security weakness with limited impact or exploitability.	|Monitor and address during normal maintenance
 
 ---
 
