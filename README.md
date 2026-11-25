@@ -703,37 +703,58 @@ Based on the information collected during the penetration testing activities, I 
 
 ## Risk rating
 
-|#|Finding|	OWASP Category|Likelihood|	Impact	|Risk Rating|
+|ID|Finding|	OWASP Category|Likelihood|	Impact	|Risk Rating|
 |---|---|----------|-----------|------|-------|
-|1	|Sensitive Directory Disclosure via robots.txt	|A02 Security Misconfiguration|🟡 Medium|🟡 Medium|🟡 Medium
-|2|	Directory Listing Enabled on Patient Portal	|A02 Security Misconfiguration|🟠 High|🟡 Medium	|🟠 High
-|3|Publicly Accessible Legacy Database Backup	|A01 Broken Access Control / A02 Security Misconfiguration|🟠 High|🟠 High	|🔴 Critical
-|4	|Username Enumeration Through Authentication Messages|A07 Identification and Authentication Failures|🟠 High	|🟡 Medium|🟠 High
+|1	|Weak Passwords Protecting Encrypted Reports	|A07 Identification and Authentication Failures	|🟠 High|🟠 High|	🔴 Critical
+|2|Publicly Accessible Legacy Database Backup	|A01 Broken Access Control / A02 Security Misconfiguration|🟠 High|🟠 High	|🔴 Critical
+|3	|SQL Injection in Patient Portal Authentication|A05 Injection	|🟠 High|🟠 High|	🔴 Critical
+|4	|Unauthorized Access to Confidential Patient Reports|A01 Broken Access Control|🟠 High|🟠 High	|🔴 Critical
 |5|	No Account Lockout or Rate Limiting|	A07 Identification and Authentication Failures|🟠 High|	🟠 High|	🟠 High
-|6	|SQL Injection in Patient Portal Authentication|A05 Injection	|🟠 High|🟠 High|	🔴 Critical
-|7	|Unauthorized Access to Confidential Patient Reports|A01 Broken Access Control|🟠 High|🟠 High	|🔴 Critical
-|8	|Weak Passwords Protecting Encrypted Reports	|A07 Identification and Authentication Failures	|🟠 High|🟠 High|	🔴 Critical
+|6	|Username Enumeration Through Authentication Messages|A07 Identification and Authentication Failures|🟠 High	|🟡 Medium|🟠 High
+|7|	Directory Listing Enabled on Patient Portal	|A02 Security Misconfiguration|🟠 High|🟡 Medium	|🟠 High
+|8	|Sensitive Directory Disclosure via robots.txt	|A02 Security Misconfiguration|🟡 Medium|🟡 Medium|🟡 Medium
 
 ---
 
 # 5. 💎 Recommendations and Remediation
 
-Based on the observations from these activities, I recommend the following security improvements:
+Based on the observations from these activities, I recommend the following security corrections and improvements.
+
+---
+
+## 5.1. Prioritized recommandations and remediations
+
+The following recommendations are prioritized according to the assessed risk level and aligned with OWASP Top 10 (2025) principles. Critical findings should be addressed immediately, followed by High and Medium risk findings.
+
+|ID|	Finding|	Risk	|Recommendations|Remediation|Actions|
+|-----|------|-------|----------|---------|------|
+|1	|Weak Passwords Protecting Encrypted Reports	|🔴 Critical	|Strengthen protection of sensitive documents and stored records.	|Enforce strong password requirements. Block passwords found in known breach datasets and common password dictionaries. Add multi-factor authentication for the patient portal and administrative access. Consider centralized document access controls rather than separate document passwords. Require minimum length and complexity standards. Assess breach notification obligations to the data protection authority and affected individuals.
+|2	|Publicly Accessible Legacy Database Backup	|🔴 Critical	|Eliminate public exposure of sensitive business and personal data.	|Immediately remove backup files from web-accessible locations. Store backups outside the web root. Restrict access using file system permissions. Review exposure logs and assess potential data compromise. Implement backup management and retention policies.
+|3	|SQL Injection in Patient Portal Authentication	|🔴 Critical	|Eliminate injection vulnerabilities from all application components.	|Replace dynamic SQL statements with parameterized queries and prepared statements. Validate and sanitize user input server-side. Perform secure code review and vulnerability testing across all database interactions.
+|4	|Unauthorized Access to Confidential Patient Reports	|🔴 Critical	|Ensure sensitive medical information is accessible only to authorized users.	|Review and redesign authorization controls. Enforce server-side access validation for every request. Implement role-based access control (RBAC) and verify authorization before granting access to reports.
+|5	|No Account Lockout or Rate Limiting	|🟠 High	|Reduce the effectiveness of credential guessing and password attacks.|	Implement rate limiting, account lockout policies, progressive delays, and monitoring for repeated authentication failures. Consider CAPTCHA protection after multiple failed attempts.
+|6	|Username Enumeration Through Authentication Messages	|🟠 High	|Prevent attackers from identifying valid accounts.	|Replace detailed authentication errors with generic responses such as "Invalid username or password." Ensure identical responses are returned regardless of whether a username exists.
+|7|Directory Listing Enabled on Patient Portal	|🟠 High	|Prevent disclosure of application structure and internal resources.	|Disable directory indexing on the web server. Configure Apache/Nginx/IIS to deny directory browsing. Implement least-privilege access controls on application directories.
+|8	|Sensitive Directory Disclosure via robots.txt	|🟡 Medium	|Minimize information disclosure through publicly accessible configuration files.|	Remove references to sensitive, legacy, administrative, or restricted directories from robots.txt. Ensure sensitive resources are protected through access controls rather than obscurity. Review all publicly exposed metadata files.
+
+---
+
+## 5.2. Other recommandations
 
 1.  **Review publicly exposed technology information**  
-    Organizations should regularly review what information about their web technologies, CMS is publicly visible.
+    Organizations should regularly review what information about their web technologies.
 
 2.  **Keep software updated**  
     CMS platforms, plugins and other web technologies should be regularly updated and reviewed against current security advisories.
 
 3.  **Review HTTP headers**  
-    HTTP response headers should be reviewed to determine whether unnecessary technical information is being exposed.
+    HTTP response headers should be reviewed regularly to determine whether unnecessary technical information is being exposed.
 
 4.  **Review DNS records regularly**  
     DNS records should be checked periodically to ensure that only required information and services are publicly exposed.
 
 5.  **Properly configure and monitor the WAF**  
-    Keep the WAF (ModSecurity) enabled and tuned, since it already blocks naive attacks.
+    Keep the WAF (LiteSpeed) enabled and tuned.
 
 6.  **Perform regular internal network discovery**  
     Organizations should periodically scan their own networks to identify active devices.
@@ -747,21 +768,20 @@ Based on the observations from these activities, I recommend the following secur
 9.  **Perform security testing with authorization**  
     Reconnaissance and scanning should only be performed against systems and networks where appropriate authorization has been provided.
 
+10. **Align the hospital ISM with international standards and regulations**
+    ISO/IEC 27001 and applicable healthcare and privacy regulations.
+
 ---
 
 # 6. Conclusion
 
-During Week 2 of my Cybersecurity & Ethical Hacking internship, I completed practical activities covering footprinting, reconnaissance and network scanning.
+The security assessment of the Mediroza Hospital web platform identified a combination of weaknesses that collectively resulted in unauthorized access to sensitive organizational and patient information. The assessment revealed deficiencies in security configuration, access control, authentication mechanisms, input validation, and document protection controls. Most notably, critical weaknesses allowed unauthorized access to confidential patient reports and exposed sensitive business information, creating substantial risks to data confidentiality, regulatory compliance, and organizational reputation.
 
-In the footprinting activity, I used six Kali Linux tools to collect information about the target domain. I demonstrated how WHOIS can provide domain information, WhatWeb can identify web technologies, Nslookup can resolve domain names, Curl can inspect HTTP headers, Wafw00f can identify a WAF, and DNSRecon can provide additional DNS information.
+The findings indicate that security controls currently in place are insufficient for an environment processing sensitive healthcare and corporate information. Several vulnerabilities could be exploited by an attacker with moderate technical skills and publicly available tools, demonstrating that the application's security posture does not adequately reflect the sensitivity of the assets being protected.
 
-In the network scanning activity, I used Zenmap to identify my local network configuration and discover active hosts. I also collected IP and MAC address information and created a network topology.
+Remediation efforts should prioritize the elimination of critical vulnerabilities, particularly those affecting access control, authentication, and sensitive data exposure. High-risk findings should be addressed immediately thereafter to reduce the likelihood of future compromise and strengthen the organization's overall resilience against cyber threats.
 
-The exercises showed that information gathering is an important part of cybersecurity. Even before attempting to exploit a system, a security professional can gather a significant amount of information on an environment by carefully analyzing publicly available information and network responses.
-
-I also demonsrated that technical findings should be documented clearly. A good cybersecurity report should explain what was performed, what was discovered, what the observation means, what risk it may create, and what can be done to reduce that risk.
-
-Finally, I demonstrated that reconnaissance and scanning must always be performed within an authorized scope. These activities were completed as part of the Networkwalks Cybersecurity internsgip program.
+Definitively, the overall security posture of the assessed website is Critical due to the presence of multiple high-impact vulnerabilities that can be chained together to achieve unauthorized access to sensitive information. Prompt remediation, strengthened security governance, and the adoption of secure development and operational practices are strongly recommended to reduce organizational risk and improve long-term security maturity.
 
 ---
 
