@@ -173,7 +173,7 @@ The table below lists each tool used in this report and its purpose.
 
 ---
 
-### 🫆 Footprinting & 🔍 Reconnaissance
+### 🫆 Footprinting & Reconnaissance
 
 I performed reconnaissance against the `https://medirozahospital.com` website using Kali Linux tools: **Whois, WhatWeb, Nslookup, Curl, Wafw00f and DNSRecon**. Each tool was used to collect a different type of information about the target.
 
@@ -217,7 +217,7 @@ The outputs of all the above commands were saved in a txt file available at **`/
 
 ---
 
-### Ports Scanning with Nmap
+### 🔍 Ports Scanning with Nmap
 
 I used **nmap** from my Kali Linux terminal to perform ports scanning on the target. The website's IP address is **`199.188.201.16`**). 
 
@@ -273,7 +273,143 @@ The output of this second scan is saved in a txt file available at **`/outputs_f
 
 ---
 
-## Salaries
+### Enumeration
+
+I used `curl` to perform enumeration on the target with the following commands:
+
+````bash
+curl -s https://medirozahospital.com | grep -Eo 'href="[^"]+"' | sort -u
+````
+
+````bash
+curl https://medirozahospital.com/sitemap.xml 
+````
+
+````bash
+curl https://medirozahospital.com/robots.txt
+````
+
+---
+
+![enumeration.png](/screenshots/enumeration.png)
+
+---
+
+I remarked information disclosure via **`robots.txt`**: paths that were not visible through normal navigation on the website had showed up. 
+
+They were 3 key paths:
+
+````text
+https://medirozahospital.com/patient/
+https://medirozahospital.com/staff/
+https://medirozahospital.com/old/
+````
+
+Those are exposed entry points.
+
+I entered them one by one in the browser.
+
+---
+
+#### /patient/
+
+![patient.png](/screenshots/patient.png)
+
+---
+
+#### /staff/
+
+![staff.png](/screenshots/staff.png)
+
+---
+
+#### /old/
+
+![old.png](/screenshots/old.png)
+
+---
+
+The presence of a folder **/patient/reports** indicated that there would patient reports files in the **Patient Portal**.
+
+I tried to gain the access with common usernames and passwords. I analyzed the behaviour of the authentication mechanisms.
+
+---
+
+#### wrong username error message
+
+![username_wrong.png](/screenshots/username_wrong.png)
+
+---
+
+A trial with the default username `admin` got **Incorrect password**.
+
+---
+
+![admin.png](/screenshots/admin.png)
+
+---
+
+#### correct username error message
+
+![username_correct.png](/screenshots/username_correct.png)
+
+---
+
+That behaviour lets guess which one of the credentials is wrong and helps a correct username even if the entered password is wrong.
+
+Having a valid username could make the attack easier.
+
+As many common passwords were failing, I opted for SQL injection.
+
+Here again the behaviour of the authentication mechanisms was indiscreet. The error messages indicated the position of the wrong syntax in the SQL requests.
+
+---
+
+![sql_error_1.png](/screenshots/sql_error_1.png)
+
+---
+
+![sql_error_2.png](/screenshots/sql_error_2.png)
+
+---
+
+I gained the access by commenting the password requirement with the SQL injection.
+
+---
+
+![sql_correct.png](/screenshots/sql_correct.png)
+
+---
+
+![portal_accessed.png](/screenshots/portal_accessed.png)
+
+---
+
+I downloaded the 3 reports by clicking on the `download` buttons.
+
+---
+
+![reports_download.png](/screenshots/reports_download.png)
+
+---
+
+The downloaded reports PDF files are available in the folder **`/output_files/`**.
+
+---
+
+## 3.2 Milestone 2 - 
+
+---
+
+crack
+
+---
+
+## 3.3 Milestone 3 - Critical data exposure on the client server
+
+---
+
+### Salaries
 
 ID (`id`)|Full Name (`full_name`)|Job Title (`job_title`)|Department (`department`)|Salary in ZAR (`monthly_salary_zar`)|Date Joined (`date_joined`)|
 ----|-------|-----------|--------|-----------|------------|
@@ -310,7 +446,7 @@ ID (`id`)|Full Name (`full_name`)|Job Title (`job_title`)|Department (`departmen
 
 ---
 
-## Shareholders
+### Shareholders
 
 |ID (`id`)|Shareholder Name (`shareholder_name`)|Share Percent (`share_percent`)|Shares Held (`shares_held`)|Share Class (`share_class`)|
 -----|-------------------|------------------|---------|---------|
@@ -430,72 +566,6 @@ The outputs files and screenshots are respectively stored in the **`/outputs_fil
 
 ---
 
-## 📷Screenshots Gallery
-
-*Screenshots collected as evidence during the activities.*
-
----
-
-### whois
-
-![whois output](/screenshots/1_whois.png)
-
----
-
-### whatweb
-
-![whatweb output](/screenshots/2_whatweb.png)
-
----
-
-### nslookup
-
-![nslookup output](/screenshots/3_nslookup.png)
-
----
-
-### curl
-
-![curl output](/screenshots/4_curl.png)
-
----
-
-### wafw00f
-
-![wafw00f output](/screenshots/5_wafw00f.png)
-
----
-
-### dnsrecon
-
-![dnsrecon output](/screenshots/6_dnsrecon.png)
-
----
-
-### zenmap scan
-
-![zenmap output](/screenshots/7_zenmap.png)
-
----
-
-### ifconfig
-
-![loacal_mac output](/screenshots/8_ifconfig-a.png)
-
----
-
-### zenmap topology
-
-![Zenmap scan and topology](/screenshots/9_topology.png)
-
----
-
-### ipconfig
-
-![windows_mac output](/screenshots/ipconfig_all.png)
-
----
-
 ## Project Short Video
 
 We recorded a short video of the project completion.
@@ -519,5 +589,5 @@ LinkedIn: https://www.linkedin.com/in/kokou-sodjin%C3%A8-aziagbedo-434b2949
 
 ## 📌 Project Information
 
-**Program Name:** Cybersecurity at Networkwalks | **Week:** 02 | **Project:** Footprinting & Reconnaissance Attacks With Multiple KALI Tools | **Repository:** GitHub
+**Program Name:** Cybersecurity at Networkwalks | **Week:** 04 | **Project:** Real-world Penetration Testing - Mediroza Hospital | **Repository:** GitHub
 
