@@ -717,21 +717,19 @@ The outputs files and screenshots are respectively stored in the **`/output_file
 | Command | Screenshot | Output File| Comments |
 |----------|-------|-------|--------|
 |  | ├ 📂screenshots|├ 📂output_files|Folders|
-| `whois www.medirozahospital.com` | ├─ [1_whois.png](/screenshots/1_whois.png)| ├─ [1_whois.txt](/outputs_files/1_whois.txt)  |  Looked for registration details  
-|  `whatweb www.medirozahospital.com`|├─ [2_whatweb.png](/screenshots/2_whatweb.png) | ├─ [2_whatweb.txt](/outputs_files/2_whatweb.txt) | Inspected used technologies | 
-|   `nslookup www.medirozahospital.com` | ├─ [3_nslookup.png](/screenshots/3_nslookup.png)| ├─ [3_nslookup.txt](/outputs_files/3_nslookup.txt) | Resolved the website name to its IP address    |
-| `curl -I www.medirozahospital.com`|├─ [4_curl.png](/screenshots/4_curl.png) | ├─ [4_curl.txt](/outputs_files/4_curl.txt) | Inspected HTTP response headers  |                 
-| `wafw00f www.medirozahospital.com` |├─ [5_wafw00f.png](/screenshots/5_wafw00f.png) | ├─ [5_wafw00f.txt](/outputs_files/5_wafw00f.txt)  | Determined Web Application Firewall    |              
-| `dnsrecon -d www.medirozahospital.com`|├─ [6_dnsrecon.png](/screenshots/6_dnsrecon.png) | ├─ [6_dnsrecon.txt](/outputs_files/6_dnsrecon.txt) | Enumerated DNS records|              
-|  `nmap -sV -sC 199.188.201.16` |├─ [7_zenmap.png](/screenshots/7_zenmap.png) | ├─ [7_zenmap.txt](/outputs_files/7_zenmap.txt) | Scanned ports |
-|  `nmap -A -p- -T4 199.188.201.16 -oN scan_full.txt` |├─ [7_zenmap.png](/screenshots/7_zenmap.png) | ├─ [7_zenmap.txt](/outputs_files/7_zenmap.txt) | Scanned ports fully and saved output in scan_full.txt |
+| `whois www.medirozahospital.com` | ├─ [1_whois.png](/screenshots/1_whois.png)| ├─ [footprinting.txt](/output_files/footprinting.txt)  |  Looked for registration details  
+|  `whatweb www.medirozahospital.com`|├─ [2_whatweb.png](/screenshots/2_whatweb.png) | ├─ [footprinting.txt](/output_files/footprinting.txt) | Inspected used technologies | 
+|   `nslookup www.medirozahospital.com` | ├─ [3_nslookup.png](/screenshots/3_nslookup.png)| ├─ [footprinting.txt](/output_files/footprinting.txt) | Resolved the website name to its IP address    |
+| `curl -I www.medirozahospital.com`|├─ [4_curl.png](/screenshots/4_curl.png) | ├─ [footprinting.txt](/output_files/footprinting.txt) | Inspected HTTP response headers  |                 
+| `wafw00f www.medirozahospital.com` |├─ [5_wafw00f.png](/screenshots/5_wafw00f.png) | ├─ [footprinting.txt](/output_files/footprinting.txt)  | Determined Web Application Firewall    |              
+| `dnsrecon -d www.medirozahospital.com`|├─ [6_dnsrecon.png](/screenshots/6_dnsrecon.png) | ├─ [footprinting.txt](/output_files/footprinting.txt) | Enumerated DNS records|              
+|  `nmap -sV -sC 199.188.201.16` |├─ [scan_short.png](/screenshots/scan_short.png) | ├─ [scan_short.txt](/output_files/scan_short.txt) | Scanned ports |
+|  `nmap -A -p- -T4 199.188.201.16 -oN scan_full.txt` |├─ [scan_full.png](/screenshots/scan_full.png) | ├─ [scan_full.txt](/output_files/scan_full.txt) | Scanned ports fully and saved output in scan_full.txt |
 
 
-| `curl -s https://medirozahospital.com | grep ...`|├─ [enumeration.png](/screenshots/enumeration.png)| ├─ [enumeration.txt](/outputs_files/enumeration.txt) | Discovered publicly referenced application routes  | 
-
-| `curl https://medirozahospital.com/sitemap.xml`|├─ [enumeration.png](/screenshots/enumeration.png)| ├─ [enumeration.txt](/outputs_files/enumeration.txt) | Discovered indexed pages  | 
-
-| `curl https://medirozahospital.com/robots.txt`|├─ [enumeration.png](/screenshots/enumeration.png) | ├─ [enumeration.txt](/outputs_files/enumeration.txt) | Discovered hidden directories | 
+| `curl -s https://medirozahospital.com | grep ...`|├─ [enumeration.png](/screenshots/enumeration.png)| ├─ [enumeration.txt](/output_files/enumeration.txt) | Discovered publicly referenced application routes  | 
+| `curl https://medirozahospital.com/sitemap.xml`|├─ [enumeration.png](/screenshots/enumeration.png)| ├─ [enumeration.txt](/output_files/enumeration.txt) | Discovered indexed pages  | 
+| `curl https://medirozahospital.com/robots.txt`|├─ [enumeration.png](/screenshots/enumeration.png) | ├─ [enumeration.txt](/output_files/enumeration.txt) | Discovered hidden directories | 
 
 | `ifconfig -a` |├─ [8_ifconfig-a.png](/screenshots/8_ifconfig-a.png) | ├─ [8_ifconfig-a.txt](/outputs_files/8_ifconfig-a.txt) | Found local VM MAC address |   
 | `Topology -> Save Graphic` |├─ [9_topology.png](/screenshots/9_topology.png) | ├─ [9_topology.pdf](/outputs_files/9_topology.pdf)  | Drew the network topology |
