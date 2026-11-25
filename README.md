@@ -733,7 +733,7 @@ The outputs files and screenshots are respectively stored in the **`/output_file
 |---------|---------|
 |M1|[portal_accessed.png](/screenshots/portal_accessed.png), [patient_report_1.pdf](/download/patient_report_1.pdf), [patient_report_2.pdf](/download/patient_report_2.pdf), [patient_report_3.pdf](/download/patient_report_3.pdf)|
 |M2|[pdf1_crack.png](/screenshots/pdf1_crack.png), [pdf1_open.png](/screenshots/pdf1_open.png), [pdf2_crack.png](/screenshots/pdf2_crack.png), [pdf2_open.png](/screenshots/pdf2_open.png), [pdf3_crack.png](/screenshots/pdf3_crack.png), [pdf3_open.png](/screenshots/pdf3_open.png)|
-|M3|[backup_1.png](/screenshots/backup_1.png), [backup_2.png](/screenshots/backup_2.png), [backup_3.png](/screenshots/backup_3.png), [Database and technical details](#database-and-technical-details)|
+|M3|[backup_1.png](/screenshots/backup_1.png), [backup_2.png](/screenshots/backup_2.png), [backup_3.png](/screenshots/backup_3.png), [Database and technical details](#database-and-technical-details), [Salaries](#salaries), [Shareholders](#shareholders)|
 
 ---
 
