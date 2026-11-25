@@ -708,22 +708,31 @@ Finally, I demonstrated that reconnaissance and scanning must always be performe
 
 *The outputs of executed commands are saved in files and screenshots are collected as evidences during the activities.*
 
-The outputs files and screenshots are respectively stored in the **`/outputs_files/`** and **`/screenshots/`** folders.
+The outputs files and screenshots are respectively stored in the **`/output_files/`** and **`/screenshots/`** folders.
 
 ---
 
-### The contents of the /outputs_files/ and /screenshots/ folders 
+### The contents of the /output_files/ and /screenshots/ folders 
 
 | Command | Screenshot | Output File| Comments |
 |----------|-------|-------|--------|
-|  | ├ 📂screenshots|├ 📂outputs_files|Folders|
-| `whois networkwalks.com` | ├─ [1_whois.png](/screenshots/1_whois.png)| ├─ [1_whois.txt](/outputs_files/1_whois.txt)  |  Found domain registration details  
-|  `whatweb networkwalks.com`|├─ [2_whatweb.png](/screenshots/2_whatweb.png) | ├─ [2_whatweb.txt](/outputs_files/2_whatweb.txt) | Identified used technologies | 
-|   `nslookup networkwalks.com` | ├─ [3_nslookup.png](/screenshots/3_nslookup.png)| ├─ [3_nslookup.txt](/outputs_files/3_nslookup.txt) | Resolved the domain name to its IP address    |
-| `curl -I https://networkwalks.com`|├─ [4_curl.png](/screenshots/4_curl.png) | ├─ [4_curl.txt](/outputs_files/4_curl.txt) | Inspected HTTP response headers  |                 
-| `wafw00f networkwalks.com` |├─ [5_wafw00f.png](/screenshots/5_wafw00f.png) | ├─ [5_wafw00f.txt](/outputs_files/5_wafw00f.txt)  | Determined Web Application Firewall    |              
-| `dnsrecon -d networkwalks.com`|├─ [6_dnsrecon.png](/screenshots/6_dnsrecon.png) | ├─ [6_dnsrecon.txt](/outputs_files/6_dnsrecon.txt) | Enumerated DNS records|              
-|  `nmap -sn 10.0.0.0/24` |├─ [7_zenmap.png](/screenshots/7_zenmap.png) | ├─ [7_zenmap.txt](/outputs_files/7_zenmap.txt) | Scanned local network |
+|  | ├ 📂screenshots|├ 📂output_files|Folders|
+| `whois www.medirozahospital.com` | ├─ [1_whois.png](/screenshots/1_whois.png)| ├─ [1_whois.txt](/outputs_files/1_whois.txt)  |  Looked for registration details  
+|  `whatweb www.medirozahospital.com`|├─ [2_whatweb.png](/screenshots/2_whatweb.png) | ├─ [2_whatweb.txt](/outputs_files/2_whatweb.txt) | Inspected used technologies | 
+|   `nslookup www.medirozahospital.com` | ├─ [3_nslookup.png](/screenshots/3_nslookup.png)| ├─ [3_nslookup.txt](/outputs_files/3_nslookup.txt) | Resolved the website name to its IP address    |
+| `curl -I www.medirozahospital.com`|├─ [4_curl.png](/screenshots/4_curl.png) | ├─ [4_curl.txt](/outputs_files/4_curl.txt) | Inspected HTTP response headers  |                 
+| `wafw00f www.medirozahospital.com` |├─ [5_wafw00f.png](/screenshots/5_wafw00f.png) | ├─ [5_wafw00f.txt](/outputs_files/5_wafw00f.txt)  | Determined Web Application Firewall    |              
+| `dnsrecon -d www.medirozahospital.com`|├─ [6_dnsrecon.png](/screenshots/6_dnsrecon.png) | ├─ [6_dnsrecon.txt](/outputs_files/6_dnsrecon.txt) | Enumerated DNS records|              
+|  `nmap -sV -sC 199.188.201.16` |├─ [7_zenmap.png](/screenshots/7_zenmap.png) | ├─ [7_zenmap.txt](/outputs_files/7_zenmap.txt) | Scanned ports |
+|  `nmap -A -p- -T4 199.188.201.16 -oN scan_full.txt` |├─ [7_zenmap.png](/screenshots/7_zenmap.png) | ├─ [7_zenmap.txt](/outputs_files/7_zenmap.txt) | Scanned ports fully and saved output in scan_full.txt |
+
+
+| `curl -s https://medirozahospital.com | grep ...`|├─ [enumeration.png](/screenshots/enumeration.png)| ├─ [enumeration.txt](/outputs_files/enumeration.txt) | Discovered publicly referenced application routes  | 
+
+| `curl https://medirozahospital.com/sitemap.xml`|├─ [enumeration.png](/screenshots/enumeration.png)| ├─ [enumeration.txt](/outputs_files/enumeration.txt) | Discovered indexed pages  | 
+
+| `curl https://medirozahospital.com/robots.txt`|├─ [enumeration.png](/screenshots/enumeration.png) | ├─ [enumeration.txt](/outputs_files/enumeration.txt) | Discovered hidden directories | 
+
 | `ifconfig -a` |├─ [8_ifconfig-a.png](/screenshots/8_ifconfig-a.png) | ├─ [8_ifconfig-a.txt](/outputs_files/8_ifconfig-a.txt) | Found local VM MAC address |   
 | `Topology -> Save Graphic` |├─ [9_topology.png](/screenshots/9_topology.png) | ├─ [9_topology.pdf](/outputs_files/9_topology.pdf)  | Drew the network topology |
 | `ipconfig /all` | └─ [ipconfig_all.png](/screenshots/ipconfig_all.png) | └─ [ipconfig_all.txt](/outputs_files/ipconfig_all.txt) | Confirmed Windows VM's MAC and IP addresses |   
