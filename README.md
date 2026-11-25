@@ -652,13 +652,13 @@ Based on the information collected during the penetration testing activities, I 
 |#|Finding|	OWASP Category|Likelihood|	Impact	|Risk Rating|
 |---|---|----------|-----------|------|-------|
 |MED-01	|Sensitive Directory Disclosure via robots.txt	|A05 Security Misconfiguration|	Medium|	Medium|	Medium
-MED-02	Directory Listing Enabled on Patient Portal	A05 Security Misconfiguration	High	Medium	High
-MED-03	Publicly Accessible Legacy Database Backup	A01 Broken Access Control / A05 Security Misconfiguration	Very High	Very High	Critical
-MED-04	Username Enumeration Through Authentication Messages	A07 Identification and Authentication Failures	High	Medium	Medium
-MED-05	No Account Lockout or Rate Limiting	A07 Identification and Authentication Failures	High	High	High
-MED-06	SQL Injection in Patient Portal Authentication	A03 Injection	Very High	Very High	Critical
-MED-07	Unauthorized Access to Confidential Patient Reports	A01 Broken Access Control	Very High	Very High	Critical
-MED-08	Weak Passwords Protecting Encrypted Reports	A07 Identification and Authentication Failures	Very High	High	Critical
+|MED-02|	Directory Listing Enabled on Patient Portal	|A05 Security Misconfiguration|High|Medium	|High
+|MED-03|Publicly Accessible Legacy Database Backup	|A01 Broken Access Control / A05 Security Misconfiguration| High| High	|Critical
+|MED-04	|Username Enumeration Through Authentication Messages|A07 Identification and Authentication Failures|High	|Medium|Medium
+|MED-05|	No Account Lockout or Rate Limiting|	A07 Identification and Authentication Failures|	High|	High|	High
+|MED-06	|SQL Injection in Patient Portal Authentication|A03 Injection	|Very High|Very High|	Critical
+|MED-07	|Unauthorized Access to Confidential Patient Reports|A01 Broken Access Control|Very High|Very High	|Critical
+|MED-08	|Weak Passwords Protecting Encrypted Reports	|A07 Identification and Authentication Failures	|Very High|High|	Critical
 
 ---
 
@@ -745,6 +745,12 @@ The outputs files and screenshots are respectively stored in the **`/output_file
 |M1|[portal_accessed.png](/screenshots/portal_accessed.png), [patient_report_1.pdf](/download/patient_report_1.pdf), [patient_report_2.pdf](/download/patient_report_2.pdf), [patient_report_3.pdf](/download/patient_report_3.pdf)|
 |M2|[pdf1_crack.png](/screenshots/pdf1_crack.png), [pdf1_open.png](/screenshots/pdf1_open.png), [pdf2_crack.png](/screenshots/pdf2_crack.png), [pdf2_open.png](/screenshots/pdf2_open.png), [pdf3_crack.png](/screenshots/pdf3_crack.png), [pdf3_open.png](/screenshots/pdf3_open.png)|
 |M3|[backup_1.png](/screenshots/backup_1.png), [backup_2.png](/screenshots/backup_2.png), [backup_3.png](/screenshots/backup_3.png), [Database and technical details](#database-and-technical-details), [Salaries](#salaries), [Shareholders](#shareholders)|
+
+---
+
+## 🏹 For more
+
+This penetration testing project was limited to the steps mentioned above. However, a full audit would include an analysis of open ports and their potential exploitation. Running services should also be evaluated. Furthermore, various cybersecurity tools—such as OpenVAS or ZAP—could be employed to conduct a more in-depth analysis of the web platform. In this context, more listed vulnerabilities (CVE) and their CVSS scores would be detected.
 
 ---
 
