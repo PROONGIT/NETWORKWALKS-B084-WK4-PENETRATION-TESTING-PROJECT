@@ -47,11 +47,19 @@ This project is a real-world Penetration Testing Project structured in four mile
 
 👉 M1 - Initial Access : Attack of the website and retrieval of 3 confidential patient PDF lab reports.
 
+    D E L I V E R A B L E: Proof of access and the 3 retrieved PDF files.
+
 👉 M2 - Data Extraction : Cracking the encryption on all 3 retrieved files.
+
+    D E L I V E R A B L E: Recovered contents of all 3 files with proof of successful access.
 
 👉 M3 - Attack (cracking) : Finding staff salaries and shareholder details of the hospital.
 
+    D E L I V E R A B L E: Full documented evidence of the exposure and a readable summary of the confidential data uncovered.
+
 👉 M4 - Pentest Report : Writing a professional penetration testing report for the client.
+
+    D E L I V E R A B L E: A complete professional penetration testing report.
 
 The project has a timeline of 5 days.
 
