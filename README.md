@@ -630,7 +630,7 @@ ID (`id`)|Full Name (`full_name`)|Job Title (`job_title`)|Department (`departmen
 
 # 4. 💎 Risk Rating
 
-Based on the information collected during the footprinting and network scanning activities, I identified the following potential risks.
+Based on the information collected during the penetration testing activities, I identified the following potential risks.
 
 | **\#** | **Risk / Finding**                           | **Evidence / Observation**                                  | **Potential Impact**                                                                                            | **Risk Level** |
 |--------|----------------------------------------------|-------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|----------------|
