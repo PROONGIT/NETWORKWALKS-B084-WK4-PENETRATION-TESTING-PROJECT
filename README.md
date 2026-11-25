@@ -651,14 +651,14 @@ Based on the information collected during the penetration testing activities, I 
 
 |#|Finding|	OWASP Category|Likelihood|	Impact	|Risk Rating|
 |---|---|----------|-----------|------|-------|
-|MED-01	|Sensitive Directory Disclosure via robots.txt	|A05 Security Misconfiguration|	Medium|	Medium|	Medium
-|MED-02|	Directory Listing Enabled on Patient Portal	|A05 Security Misconfiguration|High|Medium	|High
-|MED-03|Publicly Accessible Legacy Database Backup	|A01 Broken Access Control / A05 Security Misconfiguration| High| High	|Critical
-|MED-04	|Username Enumeration Through Authentication Messages|A07 Identification and Authentication Failures|High	|Medium|Medium
-|MED-05|	No Account Lockout or Rate Limiting|	A07 Identification and Authentication Failures|	High|	High|	High
-|MED-06	|SQL Injection in Patient Portal Authentication|A03 Injection	|Very High|Very High|	Critical
-|MED-07	|Unauthorized Access to Confidential Patient Reports|A01 Broken Access Control|Very High|Very High	|Critical
-|MED-08	|Weak Passwords Protecting Encrypted Reports	|A07 Identification and Authentication Failures	|Very High|High|	Critical
+|1	|Sensitive Directory Disclosure via robots.txt	|A02 Security Misconfiguration|	Medium|	Medium|	Medium
+|2|	Directory Listing Enabled on Patient Portal	|A02 Security Misconfiguration|High|Medium	|High
+|3|Publicly Accessible Legacy Database Backup	|A01 Broken Access Control / A02 Security Misconfiguration| High| High	|Critical
+|4	|Username Enumeration Through Authentication Messages|A07 Identification and Authentication Failures|High	|Medium|Medium
+|5|	No Account Lockout or Rate Limiting|	A07 Identification and Authentication Failures|	High|	High|	High
+|6	|SQL Injection in Patient Portal Authentication|A05 Injection	|Very High|Very High|	Critical
+|7	|Unauthorized Access to Confidential Patient Reports|A01 Broken Access Control|Very High|Very High	|Critical
+|8	|Weak Passwords Protecting Encrypted Reports	|A07 Identification and Authentication Failures	|Very High|High|	Critical
 
 ---
 
