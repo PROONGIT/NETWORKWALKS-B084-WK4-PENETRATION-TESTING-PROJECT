@@ -725,15 +725,9 @@ The outputs files and screenshots are respectively stored in the **`/output_file
 | `dnsrecon -d www.medirozahospital.com`|├─ [dnsrecon.png](/screenshots/dnsrecon.png) | ├─ [footprinting.txt](/output_files/footprinting.txt) | Enumerated DNS records|              
 |  `nmap -sV -sC 199.188.201.16` |├─ [scan_short_1.png](/screenshots/scan_short_1.png) | ├─ [scan_short.txt](/output_files/scan_short.txt) | Scanned ports |
 |  `nmap -A -p- -T4 199.188.201.16 -oN scan_full.txt` |├─ [scan_full_1.png](/screenshots/scan_full_1.png) | ├─ [scan_full.txt](/output_files/scan_full.txt) | Scanned ports fully and saved output in scan_full.txt |
-
-
 | `curl -s https://medirozahospital.com | grep ...`|├─ [enumeration.png](/screenshots/enumeration.png)| ├─ [enumeration.txt](/output_files/enumeration.txt) | Discovered publicly referenced application routes  | 
 | `curl https://medirozahospital.com/sitemap.xml`|├─ [enumeration.png](/screenshots/enumeration.png)| ├─ [enumeration.txt](/output_files/enumeration.txt) | Discovered indexed pages  | 
 | `curl https://medirozahospital.com/robots.txt`|├─ [enumeration.png](/screenshots/enumeration.png) | ├─ [enumeration.txt](/output_files/enumeration.txt) | Discovered hidden directories | 
-
-| `ifconfig -a` |├─ [8_ifconfig-a.png](/screenshots/8_ifconfig-a.png) | ├─ [8_ifconfig-a.txt](/outputs_files/8_ifconfig-a.txt) | Found local VM MAC address |   
-| `Topology -> Save Graphic` |├─ [9_topology.png](/screenshots/9_topology.png) | ├─ [9_topology.pdf](/outputs_files/9_topology.pdf)  | Drew the network topology |
-| `ipconfig /all` | └─ [ipconfig_all.png](/screenshots/ipconfig_all.png) | └─ [ipconfig_all.txt](/outputs_files/ipconfig_all.txt) | Confirmed Windows VM's MAC and IP addresses |   
 
 ---
 
