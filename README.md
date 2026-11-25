@@ -395,13 +395,15 @@ I downloaded the 3 reports by clicking on the `download` buttons.
 
 ---
 
-The downloaded reports PDF files are : **`patient_report_1`**, **`patient_report_2`** and **`patient_report_3`**. They are available in the folder **`/download/`**.
+The downloaded encrypted reports PDF files are : **`patient_report_1`**, **`patient_report_2`** and **`patient_report_3`**. They are available in the folder **`/download/`**.
 
 ---
 
-## 3.2 Milestone 2 - 
+## 3.2 Milestone 2 - Cracking the encrypted files
 
 ---
+
+###
 
 crack
 
