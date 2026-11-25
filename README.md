@@ -632,6 +632,17 @@ ID (`id`)|Full Name (`full_name`)|Job Title (`job_title`)|Department (`departmen
 
 Based on the information collected during the penetration testing activities, I identified the following potential risks.
 
+FIRST (Forum of Incident Response and Security Teams)
+
+
+| # | Finding | Audit severity | CVSS v3.1 base score | OWASP Top 10:2021 | Impact |
+| --- | --- | --- | --- | --- | --- |
+| 1 | **Sensitive database backup exposed.** `robots.txt` discloses the `/old` path, which publicly serves a database backup containing personal data and the company's economic and financial status. | Critical | 7.5 (High) `CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N` | A05:2021 Security Misconfiguration; A01:2021 Broken Access Control | Direct, unauthenticated data breach. No exploitation skill needed. |
+| 2 | **SQL injection and weak authentication on the patient portal.** The login is vulnerable to SQL injection. Error messages leak information on each failed attempt, and there is no limit on login attempts (no lockout or rate limiting). | Critical | 7.5 (High) `CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N` | A03:2021 Injection; A07:2021 Identification and Authentication Failures | Authentication bypass and unauthorized access to confidential patient reports. Brute-force and enumeration attacks are possible. |
+| 3 | **Weak passwords protecting encrypted health reports.** Reports are encrypted, but protected by trivial passwords (`123456`, `password`) and a third password found in the public `rockyou.txt` wordlist. Hashes were recovered and cracked with a simple dictionary attack using online tools. | High | 7.5 (High) `CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N` | A02:2021 Cryptographic Failures; A07:2021 Identification and Authentication Failures | Encryption is ineffective in practice. Report contents were fully readable. |
+
+
+
 | **\#** | **Risk / Finding**                           | **Evidence / Observation**                                  | **Potential Impact**                                                                                            | **Risk Level** |
 |--------|----------------------------------------------|-------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|----------------|
 | 1      | Web technology information exposed           | WhatWeb identified WordPress and WP Download Manager        | Attackers may use exposed technology/version information to identify software requiring further security review | **🟠 Medium**   |
