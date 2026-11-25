@@ -656,7 +656,7 @@ Therefore, the presence of information such as a software version, IP address or
 Based on the observations from these activities, I recommend the following security improvements:
 
 1.  **Review publicly exposed technology information**  
-    Organizations should regularly review what information about their web technologies, CMS and plugins is publicly visible.
+    Organizations should regularly review what information about their web technologies, CMS is publicly visible.
 
 2.  **Keep software updated**  
     CMS platforms, plugins and other web technologies should be regularly updated and reviewed against current security advisories.
