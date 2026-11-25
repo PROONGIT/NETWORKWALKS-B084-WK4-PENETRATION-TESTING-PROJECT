@@ -717,14 +717,14 @@ The outputs files and screenshots are respectively stored in the **`/output_file
 | Command | Screenshot | Output File| Comments |
 |----------|-------|-------|--------|
 |  | ├ 📂screenshots|├ 📂output_files|Folders|
-| `whois www.medirozahospital.com` | ├─ [1_whois.png](/screenshots/1_whois.png)| ├─ [footprinting.txt](/output_files/footprinting.txt)  |  Looked for registration details  
-|  `whatweb www.medirozahospital.com`|├─ [2_whatweb.png](/screenshots/2_whatweb.png) | ├─ [footprinting.txt](/output_files/footprinting.txt) | Inspected used technologies | 
-|   `nslookup www.medirozahospital.com` | ├─ [3_nslookup.png](/screenshots/3_nslookup.png)| ├─ [footprinting.txt](/output_files/footprinting.txt) | Resolved the website name to its IP address    |
-| `curl -I www.medirozahospital.com`|├─ [4_curl.png](/screenshots/4_curl.png) | ├─ [footprinting.txt](/output_files/footprinting.txt) | Inspected HTTP response headers  |                 
-| `wafw00f www.medirozahospital.com` |├─ [5_wafw00f.png](/screenshots/5_wafw00f.png) | ├─ [footprinting.txt](/output_files/footprinting.txt)  | Determined Web Application Firewall    |              
-| `dnsrecon -d www.medirozahospital.com`|├─ [6_dnsrecon.png](/screenshots/6_dnsrecon.png) | ├─ [footprinting.txt](/output_files/footprinting.txt) | Enumerated DNS records|              
-|  `nmap -sV -sC 199.188.201.16` |├─ [scan_short.png](/screenshots/scan_short.png) | ├─ [scan_short.txt](/output_files/scan_short.txt) | Scanned ports |
-|  `nmap -A -p- -T4 199.188.201.16 -oN scan_full.txt` |├─ [scan_full.png](/screenshots/scan_full.png) | ├─ [scan_full.txt](/output_files/scan_full.txt) | Scanned ports fully and saved output in scan_full.txt |
+| `whois www.medirozahospital.com` | ├─ [whois.png](/screenshots/whois.png)| ├─ [footprinting.txt](/output_files/footprinting.txt)  |  Looked for registration details  
+|  `whatweb www.medirozahospital.com`|├─ [whatweb.png](/screenshots/whatweb.png) | ├─ [footprinting.txt](/output_files/footprinting.txt) | Inspected used technologies | 
+|   `nslookup www.medirozahospital.com` | ├─ [whatweb.png](/screenshots/whatweb.png)| ├─ [footprinting.txt](/output_files/footprinting.txt) | Resolved the website name to its IP address    |
+| `curl -I www.medirozahospital.com`|├─ [whatweb.png](/screenshots/whatweb.png) | ├─ [footprinting.txt](/output_files/footprinting.txt) | Inspected HTTP response headers  |                 
+| `wafw00f www.medirozahospital.com` |├─ [wafw00f.png](/screenshots/wafw00f.png) | ├─ [footprinting.txt](/output_files/footprinting.txt)  | Determined Web Application Firewall    |              
+| `dnsrecon -d www.medirozahospital.com`|├─ [dnsrecon.png](/screenshots/dnsrecon.png) | ├─ [footprinting.txt](/output_files/footprinting.txt) | Enumerated DNS records|              
+|  `nmap -sV -sC 199.188.201.16` |├─ [scan_short_1.png](/screenshots/scan_short_1.png) | ├─ [scan_short.txt](/output_files/scan_short.txt) | Scanned ports |
+|  `nmap -A -p- -T4 199.188.201.16 -oN scan_full.txt` |├─ [scan_full_1.png](/screenshots/scan_full_1.png) | ├─ [scan_full.txt](/output_files/scan_full.txt) | Scanned ports fully and saved output in scan_full.txt |
 
 
 | `curl -s https://medirozahospital.com | grep ...`|├─ [enumeration.png](/screenshots/enumeration.png)| ├─ [enumeration.txt](/output_files/enumeration.txt) | Discovered publicly referenced application routes  | 
