@@ -760,6 +760,19 @@ https://github.com/user-attachments/assets/11905e7e-e119-48e9-9f67-ddfa2a335e24
 
 ---
 
+# 🔗 Tools & Resources
+
+- **Networkwalks Hash Calculator:** [https://networkwalks.com/hash-calculator/](https://networkwalks.com/hash-calculator/)
+- **Networkwalks Password Cracker:** [https://networkwalks.com/password-cracker/](https://networkwalks.com/password-cracker/)
+- **PTES:** [https://github.com/penetration-testing-execution-standard](https://github.com/penetration-testing-execution-standard)
+- **OWASP Risk Rating Methodology:** [https://community.owasp.org/OWASP_Risk_Rating_Methodology](https://community.owasp.org/OWASP_Risk_Rating_Methodology)
+
+---
+
+
+
+---
+
 # 👤 Author
 
 **AZIAGBEDO KOKOU SODJINE**\
