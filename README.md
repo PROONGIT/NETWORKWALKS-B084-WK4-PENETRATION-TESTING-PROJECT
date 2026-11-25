@@ -295,6 +295,8 @@ curl https://medirozahospital.com/robots.txt
 
 ---
 
+The outputs of the commands used for enumeration were saved in a txt file that is available at **`/output_files/enumeration.txt`**.
+
 I remarked information disclosure via **`robots.txt`**: paths that were not visible through normal navigation on the website had showed up. 
 
 They were 3 key paths:
@@ -393,7 +395,7 @@ I downloaded the 3 reports by clicking on the `download` buttons.
 
 ---
 
-The downloaded reports PDF files are available in the folder **`/output_files/`**.
+The downloaded reports PDF files are : **`patient_report_1`**, **`patient_report_2`** and **`patient_report_3`**. They are available in the folder **`/download/`**.
 
 ---
 
