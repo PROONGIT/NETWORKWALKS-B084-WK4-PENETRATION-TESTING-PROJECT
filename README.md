@@ -734,7 +734,7 @@ The outputs files and screenshots are respectively stored in the **`/outputs_fil
 
 We recorded a short video of the project completion.
 
-https://github.com/user-attachments/assets/52be1bf5-5ebd-4a3c-bce6-dbcb8a2232c7
+https://github.com/user-attachments/assets/11905e7e-e119-48e9-9f67-ddfa2a335e24
 
 ---
 
