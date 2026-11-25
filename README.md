@@ -704,15 +704,11 @@ Finally, I demonstrated that reconnaissance and scanning must always be performe
 
 ---
 
-## 📄Commands and collected files
+## 📄Used commands and collected files
 
 *The outputs of executed commands are saved in files and screenshots are collected as evidences during the activities.*
 
 The outputs files and screenshots are respectively stored in the **`/output_files/`** and **`/screenshots/`** folders.
-
----
-
-### The contents of the /output_files/ and /screenshots/ folders 
 
 | Command | Screenshot | Output File| Comments |
 |----------|-------|-------|--------|
@@ -728,6 +724,16 @@ The outputs files and screenshots are respectively stored in the **`/output_file
 | `curl -s https://medirozahospital.com ...`|├─ [enumeration.png](/screenshots/enumeration.png)| ├─ [enumeration.txt](/output_files/enumeration.txt) | Discovered publicly referenced application routes  | 
 | `curl https://medirozahospital.com/sitemap.xml`|├─ [enumeration.png](/screenshots/enumeration.png)| ├─ [enumeration.txt](/output_files/enumeration.txt) | Discovered indexed pages  | 
 | `curl https://medirozahospital.com/robots.txt`|├─ [enumeration.png](/screenshots/enumeration.png) | ├─ [enumeration.txt](/output_files/enumeration.txt) | Discovered hidden directories | 
+
+---
+
+## 🪧 Milestones and delivrables
+
+|Milestone|Delivrables|
+|---------|---------|
+|M1|[portal_accessed.png](/screenshots/portal_accessed.png), [patient_report_1.pdf](/download/patient_report_1.pdf), [patient_report_2.pdf](/download/patient_report_2.pdf), [patient_report_3.pdf](/download/patient_report_3.pdf)|
+|M2||
+|M3||
 
 ---
 
