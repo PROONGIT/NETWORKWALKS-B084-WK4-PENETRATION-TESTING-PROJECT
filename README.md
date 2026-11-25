@@ -395,7 +395,7 @@ I downloaded the 3 reports by clicking on the `download` buttons.
 
 ---
 
-The downloaded encrypted reports PDF files are : **`patient_report_1`**, **`patient_report_2`** and **`patient_report_3`**. They are available in the folder **`/download/`**.
+The downloaded encrypted reports PDF files are : **`patient_report_1.pdf`**, **`patient_report_2.pdf`** and **`patient_report_3.pdf`**. They are available in the folder **`/download/`**.
 
 ---
 
@@ -403,9 +403,99 @@ The downloaded encrypted reports PDF files are : **`patient_report_1`**, **`pati
 
 ---
 
-###
+### Calculating hash values
 
-crack
+I analyzed the  encryption of the locked reports PDF files.
+
+I used Networkwalks Hash Calculator and uploaded the files turn by turn. A crackable hash had been extracted in pdf2john or hashcat compatible format.
+
+The hash values of each file were saved and are available in the **`/output_files/`** : **`patient_report_1.hash.txt`**, **`patient_report_2.hash.txt`** and **`patient_report_3.hash.txt`**.
+
+---
+
+![pdf1_hash.png](/screenshots/pdf1_hash.png)
+
+---
+
+![pdf2_hash.png](/screenshots/pdf2_hash.png)
+
+---
+
+![pdf3_hash.png](/screenshots/pdf3_hash.png)
+
+---
+
+### Cracking the passwords
+
+I used Networkwalks Password Cracker over the 3 hash values.
+
+---
+
+![pdf1_crack.png](/screenshots/pdf1_crack.png)
+
+---
+
+![pdf2_crack.png](/screenshots/pdf2_crack.png)
+
+---
+
+![pdf3_crack_1.png](/screenshots/pdf3_crack_1.png)
+
+---
+
+The password cracking was not successful for the **`patient_report_3.hash.txt`** using the native wordlist of 100 words integrated to the Networkwalks tool.
+
+I uploaded the Kali Linux wordlist of 14,344,379 words into the Networkwalks tool. I run the cracking again and that was successful.
+
+---
+
+![pdf3_crack.png](/screenshots/pdf3_crack.png)
+
+---
+
+### Contents recovering
+
+I launched each of the encrypted reports PDF files. I entered the cracked passwords and validated. 
+
+---
+
+![pdf1_gap.png](/screenshots/pdf1_gap.png)
+
+---
+
+![pdf2_gap.png](/screenshots/pdf2_gap.png)
+
+---
+
+![pdf3_gap.png](/screenshots/pdf3_gap.png)
+
+---
+
+![pdf1_filled.png](/screenshots/pdf1_filled.png)
+
+---
+
+![pdf2_filled.png](/screenshots/pdf2_filled.png)
+
+---
+
+![pdf3_filled.png](/screenshots/pdf3_filled.png)
+
+---
+
+![pdf1_open.png](/screenshots/pdf1_open.png)
+
+---
+
+![pdf2_open.png](/screenshots/pdf2_open.png)
+
+---
+
+![pdf3_open.png](/screenshots/pdf3_open.png)
+
+---
+
+All the PDF files opened and their contents were recovered successfully.
 
 ---
 
