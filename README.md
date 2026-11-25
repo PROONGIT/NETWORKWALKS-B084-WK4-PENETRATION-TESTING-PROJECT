@@ -725,7 +725,7 @@ The outputs files and screenshots are respectively stored in the **`/output_file
 | `dnsrecon -d www.medirozahospital.com`|├─ [dnsrecon.png](/screenshots/dnsrecon.png) | ├─ [footprinting.txt](/output_files/footprinting.txt) | Enumerated DNS records|              
 |  `nmap -sV -sC 199.188.201.16` |├─ [scan_short_1.png](/screenshots/scan_short_1.png) | ├─ [scan_short.txt](/output_files/scan_short.txt) | Scanned ports |
 |  `nmap -A -p- -T4 199.188.201.16 -oN scan_full.txt` |├─ [scan_full_1.png](/screenshots/scan_full_1.png) | ├─ [scan_full.txt](/output_files/scan_full.txt) | Scanned ports fully and saved output in scan_full.txt |
-| `curl -s https://medirozahospital.com | grep ...`|├─ [enumeration.png](/screenshots/enumeration.png)| ├─ [enumeration.txt](/output_files/enumeration.txt) | Discovered publicly referenced application routes  | 
+| `curl -s https://medirozahospital.com ...`|├─ [enumeration.png](/screenshots/enumeration.png)| ├─ [enumeration.txt](/output_files/enumeration.txt) | Discovered publicly referenced application routes  | 
 | `curl https://medirozahospital.com/sitemap.xml`|├─ [enumeration.png](/screenshots/enumeration.png)| ├─ [enumeration.txt](/output_files/enumeration.txt) | Discovered indexed pages  | 
 | `curl https://medirozahospital.com/robots.txt`|├─ [enumeration.png](/screenshots/enumeration.png) | ├─ [enumeration.txt](/output_files/enumeration.txt) | Discovered hidden directories | 
 
