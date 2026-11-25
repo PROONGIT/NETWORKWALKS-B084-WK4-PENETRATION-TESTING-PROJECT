@@ -640,7 +640,7 @@ Based on the information collected during the penetration testing activities, I 
 
 **Likelihood and Impact Levels:** 🟢 Low 🟡 Medium 🟠 High
 
-**Risk severity levels:** 🟢 Low 🟡 Medium 🟠 High 🔴 Critical
+**Risk severity levels:** 🔵 Note 🟢 Low 🟡 Medium 🟠 High 🔴 Critical
 
 
 <table cellspacing="0" cellpadding="5" border="1" align="center">
@@ -689,6 +689,7 @@ Based on the information collected during the penetration testing activities, I 
 |🟠 High	|Serious weakness that could lead to compromise of sensitive assets.	|Remediate as a priority (1-2 Weeks)
 |🟡 Medium|Exploitable weakness with limited scope or requiring additional conditions.|Planned remediation (3-5 Weeks)
 |🟢 Low	|Security weakness with limited impact or exploitability.	|Monitor and address during normal maintenance (Ongoing)
+|🔵 Note |Very low impact security notification|Document and monitor 
 
 ---
 
