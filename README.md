@@ -633,7 +633,7 @@ ID (`id`)|Full Name (`full_name`)|Job Title (`job_title`)|Department (`departmen
 Based on the information collected during the penetration testing activities, I identified the following potential risks.
 
 FIRST (Forum of Incident Response and Security Teams)
-
+OWASP Top 10 - 2025
 
 | # | Finding | Audit severity | CVSS v3.1 base score | OWASP Top 10:2021 | Impact |
 | --- | --- | --- | --- | --- | --- |
