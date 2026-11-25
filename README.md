@@ -503,6 +503,66 @@ All the PDF files opened and their contents were recovered successfully.
 
 ---
 
+I conducted a thorough analysis of everything retrieved so far. 
+
+I tried to exploit /staff/ and /old/ found paths via enumeration.
+
+### Exploiting /staff/ enumerated path
+
+I entered common credentials in the fields of /staff/login.php. I also entered SQL injection requests.
+
+No valuable result was found via the /staff/ revealed path.
+
+---
+
+![staff.png](/screenshots/staff.png)
+
+---
+
+![staff_login.png](/screenshots/staff_login.png)
+
+---
+
+### Exploiting /old/ enumerated path
+
+I clicked and opened the file **`mediroza_db_backup_2019.sql`**.
+
+![old.png](/screenshots/old.png)
+
+---
+
+The opened page showed the company's database backup data.
+
+---
+
+![backup_1.png](/screenshots/backup_1.png)
+
+---
+
+![backup_2.png](/screenshots/backup_2.png)
+
+---
+
+![backup_3.png](/screenshots/backup_3.png)
+
+---
+
+The exposed details were critical and sensitive data. They were business financial data and staff sensitive personal data. 
+
+Specifically, the database details (name: **`mediroza_hr`**), confidential staff and shareholder records were clearly exposed.
+
+I extracted  the salaries of all hospital employees and the shareholder details of the hospital.
+
+I made a readable summary of the confidential data uncovered.
+
+---
+
+### Database and technical details
+
+|----|----|
+
+---
+
 ### Salaries
 
 ID (`id`)|Full Name (`full_name`)|Job Title (`job_title`)|Department (`department`)|Salary in ZAR (`monthly_salary_zar`)|Date Joined (`date_joined`)|
