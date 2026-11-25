@@ -636,6 +636,51 @@ Based on the information collected during the penetration testing activities, I 
 
 ---
 
+## Risk evaluation criteria
+
+**Likelihood and Impact Levels:** 🟢 Low 🟡 Medium 🟠 High
+
+**Risk severity levels:** 🟢 Low 🟡 Medium 🟠 High 🔴 Critical
+
+
+<table cellspacing="0" cellpadding="5" border="1" align="center">
+<tr>
+<th colspan="5" align="center">Overall Risk Severity</th>
+</tr>
+<tr>
+<th rowspan="4" width="15%" align="center">Impact</th>
+<td width="15%" align="center">HIGH</td>
+<td width="15%" bgcolor="orange" align="center">Medium</td>
+<td width="15%" bgcolor="red" align="center">High</td>
+<td width="15%" bgcolor="pink" align="center">Critical</td>
+</tr>
+<tr>
+<td align="center">MEDIUM</td>
+<td bgcolor="yellow" align="center">Low</td>
+<td bgcolor="orange" align="center">Medium</td>
+<td bgcolor="red" align="center">High</td>
+</tr>
+<tr>
+<td align="center">LOW</td>
+<td bgcolor="lightgreen" align="center">Note</td>
+<td bgcolor="yellow" align="center">Low</td>
+<td bgcolor="orange" align="center">Medium</td>
+</tr>
+<tr>
+<td align="center">&nbsp;</td>
+<td align="center">LOW</td>
+<td align="center">MEDIUM</td>
+<td align="center">HIGH</td>
+</tr>
+<tr>
+<td align="center">&nbsp;</td>
+<th colspan="4" align="center">Likelihood</th>
+</tr>
+</table>
+<br/>
+
+---
+
 ## Risk Severity Classification
 
 |Rating|	Description|	Management Attention|
@@ -651,14 +696,14 @@ Based on the information collected during the penetration testing activities, I 
 
 |#|Finding|	OWASP Category|Likelihood|	Impact	|Risk Rating|
 |---|---|----------|-----------|------|-------|
-|1	|Sensitive Directory Disclosure via robots.txt	|A02 Security Misconfiguration|	Medium|	Medium|	Medium
-|2|	Directory Listing Enabled on Patient Portal	|A02 Security Misconfiguration|High|Medium	|High
-|3|Publicly Accessible Legacy Database Backup	|A01 Broken Access Control / A02 Security Misconfiguration| High| High	|Critical
-|4	|Username Enumeration Through Authentication Messages|A07 Identification and Authentication Failures|High	|Medium|Medium
-|5|	No Account Lockout or Rate Limiting|	A07 Identification and Authentication Failures|	High|	High|	High
-|6	|SQL Injection in Patient Portal Authentication|A05 Injection	|Very High|Very High|	Critical
-|7	|Unauthorized Access to Confidential Patient Reports|A01 Broken Access Control|Very High|Very High	|Critical
-|8	|Weak Passwords Protecting Encrypted Reports	|A07 Identification and Authentication Failures	|Very High|High|	Critical
+|1	|Sensitive Directory Disclosure via robots.txt	|A02 Security Misconfiguration|🟡 Medium|🟡 Medium|🟡 Medium
+|2|	Directory Listing Enabled on Patient Portal	|A02 Security Misconfiguration|🟠 High|🟡 Medium	|🟠 High
+|3|Publicly Accessible Legacy Database Backup	|A01 Broken Access Control / A02 Security Misconfiguration|🟠 High|🟠 High	|🔴 Critical
+|4	|Username Enumeration Through Authentication Messages|A07 Identification and Authentication Failures|🟠 High	|🟡 Medium|🟠 High
+|5|	No Account Lockout or Rate Limiting|	A07 Identification and Authentication Failures|🟠 High|	🟠 High|	🟠 High
+|6	|SQL Injection in Patient Portal Authentication|A05 Injection	|🟠 High|🟠 High|	🔴 Critical
+|7	|Unauthorized Access to Confidential Patient Reports|A01 Broken Access Control|🟠 High|🟠 High	|🔴 Critical
+|8	|Weak Passwords Protecting Encrypted Reports	|A07 Identification and Authentication Failures	|🟠 High|🟠 High|	🔴 Critical
 
 ---
 
