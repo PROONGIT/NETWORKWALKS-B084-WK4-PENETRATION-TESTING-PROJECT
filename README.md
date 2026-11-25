@@ -632,42 +632,33 @@ ID (`id`)|Full Name (`full_name`)|Job Title (`job_title`)|Department (`departmen
 
 Based on the information collected during the penetration testing activities, I identified the following potential risks.
 
-FIRST (Forum of Incident Response and Security Teams)
-OWASP Top 10 - 2025
+[**OWASP resources**](#-tools--resources) were used for risk classification and rating.
 
-| # | Finding | Audit severity | CVSS v3.1 base score | OWASP Top 10:2021 | Impact |
-| --- | --- | --- | --- | --- | --- |
-| 1 | **Sensitive database backup exposed.** `robots.txt` discloses the `/old` path, which publicly serves a database backup containing personal data and the company's economic and financial status. | Critical | 7.5 (High) `CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N` | A05:2021 Security Misconfiguration; A01:2021 Broken Access Control | Direct, unauthenticated data breach. No exploitation skill needed. |
-| 2 | **SQL injection and weak authentication on the patient portal.** The login is vulnerable to SQL injection. Error messages leak information on each failed attempt, and there is no limit on login attempts (no lockout or rate limiting). | Critical | 7.5 (High) `CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N` | A03:2021 Injection; A07:2021 Identification and Authentication Failures | Authentication bypass and unauthorized access to confidential patient reports. Brute-force and enumeration attacks are possible. |
-| 3 | **Weak passwords protecting encrypted health reports.** Reports are encrypted, but protected by trivial passwords (`123456`, `password`) and a third password found in the public `rockyou.txt` wordlist. Hashes were recovered and cracked with a simple dictionary attack using online tools. | High | 7.5 (High) `CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N` | A02:2021 Cryptographic Failures; A07:2021 Identification and Authentication Failures | Encryption is ineffective in practice. Report contents were fully readable. |
-
-
-
-
-
-
-
-
-
-| **\#** | **Risk / Finding**                           | **Evidence / Observation**                                  | **Potential Impact**                                                                                            | **Risk Level** |
-|--------|----------------------------------------------|-------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|----------------|
-| 1      | Web technology information exposed           | WhatWeb identified WordPress and WP Download Manager        | Attackers may use exposed technology/version information to identify software requiring further security review | **🟠 Medium**   |
-| 2      | Server IP address identifiable               | Nslookup resolved the domain to `192.232.216.135`           | Provides information about the network location of the web service                                              | **🟡 Low**      |
-| 3      | HTTP technical information exposed           | Curl returned HTTP response headers and exposed `/wp-json/` | May assist technology fingerprinting and further enumeration                                                    | **🟡 Low**      |
-| 4      | WAF technology identifiable                  | Wafw00f identified ModSecurity (SpiderLabs)                 | Reveals information about the web application’s security architecture                                           | **🟡 Low**      |
-| 5      | DNS infrastructure information exposed       | DNSRecon identified DNS, mail and service-related records   | DNS information can help build a broader infrastructure profile                                                 | **🟠 Medium**   |
-| 6      | Multiple live hosts visible on local network | Zenmap identified three live hosts in the example network    | Unknown or unauthorized devices may potentially be present on a network                                         | **🟠 Medium**   |
-
-**Risk level key:** 🔴 Critical 🟠 High 🟡 Medium 🟢 Low
+---
 
 ## Risk Severity Classification
 
 |Rating|	Description|	Management Attention|
 |------------|----|-----|
-|🔴 Critical	|Immediate risk of unauthorized access, large-scale data exposure, or significant business impact.	|Immediate remediation required
-|🟠 High	|Serious weakness that could lead to compromise of sensitive assets.	|Remediate as a priority
-|🟡 Medium	|Exploitable weakness with limited scope or requiring additional conditions.	|Planned remediation
-|🟢 Low	|Security weakness with limited impact or exploitability.	|Monitor and address during normal maintenance
+|🔴 Critical	|Immediate risk of unauthorized access, large-scale data exposure, or significant business impact.	|Immediate remediation required (0-48 Hours)
+|🟠 High	|Serious weakness that could lead to compromise of sensitive assets.	|Remediate as a priority (1-2 Weeks)
+|🟡 Medium|Exploitable weakness with limited scope or requiring additional conditions.|Planned remediation (3-5 Weeks)
+|🟢 Low	|Security weakness with limited impact or exploitability.	|Monitor and address during normal maintenance (Ongoing)
+
+---
+
+## Risk rating
+
+|#|Finding|	OWASP Category|Likelihood|	Impact	|Risk Rating|
+|---|---|----------|-----------|------|-------|
+|MED-01	|Sensitive Directory Disclosure via robots.txt	|A05 Security Misconfiguration|	Medium|	Medium|	Medium
+MED-02	Directory Listing Enabled on Patient Portal	A05 Security Misconfiguration	High	Medium	High
+MED-03	Publicly Accessible Legacy Database Backup	A01 Broken Access Control / A05 Security Misconfiguration	Very High	Very High	Critical
+MED-04	Username Enumeration Through Authentication Messages	A07 Identification and Authentication Failures	High	Medium	Medium
+MED-05	No Account Lockout or Rate Limiting	A07 Identification and Authentication Failures	High	High	High
+MED-06	SQL Injection in Patient Portal Authentication	A03 Injection	Very High	Very High	Critical
+MED-07	Unauthorized Access to Confidential Patient Reports	A01 Broken Access Control	Very High	Very High	Critical
+MED-08	Weak Passwords Protecting Encrypted Reports	A07 Identification and Authentication Failures	Very High	High	Critical
 
 ---
 
@@ -775,6 +766,7 @@ https://github.com/user-attachments/assets/11905e7e-e119-48e9-9f67-ddfa2a335e24
 - **Networkwalks Password Cracker:** [https://networkwalks.com/password-cracker/](https://networkwalks.com/password-cracker/)
 - **PTES:** [https://github.com/penetration-testing-execution-standard](https://github.com/penetration-testing-execution-standard)
 - **OWASP Risk Rating Methodology:** [https://community.owasp.org/OWASP_Risk_Rating_Methodology](https://community.owasp.org/OWASP_Risk_Rating_Methodology)
+- **OWASP Top 10:2025:** [https://top10.owasp.org/2025/](https://top10.owasp.org/2025/)
 
 ---
 
